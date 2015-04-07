@@ -16,6 +16,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         // Override point for customization after application launch.
+        
+        Parse.setApplicationId("jXj18SG3ynYCfXcSDHuYb5KjQCkDNOW6ijFJnhZ8", clientKey:"P5wAFGoI9d04XG7WHVOempirgkJJqor2i9EWh7j8")
+        
+        // PFFacebookUtils.initializeFacebook()
+        
         return true
     }
 
