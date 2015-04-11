@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		E23D2E091AD3E8CF00C873FD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E23D2E081AD3E8CF00C873FD /* AppDelegate.swift */; };
-		E23D2E0B1AD3E8CF00C873FD /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E23D2E0A1AD3E8CF00C873FD /* ViewController.swift */; };
 		E23D2E0E1AD3E8CF00C873FD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E23D2E0C1AD3E8CF00C873FD /* Main.storyboard */; };
 		E23D2E101AD3E8CF00C873FD /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E23D2E0F1AD3E8CF00C873FD /* Images.xcassets */; };
 		E23D2E131AD3E8CF00C873FD /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = E23D2E111AD3E8CF00C873FD /* LaunchScreen.xib */; };
@@ -26,6 +25,8 @@
 		E23D2E3D1AD3F76100C873FD /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E23D2E3C1AD3F76100C873FD /* SystemConfiguration.framework */; };
 		E23D2E3F1AD3F77400C873FD /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = E23D2E3E1AD3F77400C873FD /* libz.dylib */; };
 		E23D2E411AD3F79300C873FD /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = E23D2E401AD3F79300C873FD /* libsqlite3.dylib */; };
+		E24B7C5A1AD972670026E63B /* RequestFormViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E24B7C591AD972670026E63B /* RequestFormViewController.swift */; };
+		E24B7C5C1AD9AAB20026E63B /* QuotesFeedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E24B7C5B1AD9AAB20026E63B /* QuotesFeedViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -42,7 +43,6 @@
 		E23D2E031AD3E8CF00C873FD /* YOUTIR.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = YOUTIR.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E23D2E071AD3E8CF00C873FD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E23D2E081AD3E8CF00C873FD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		E23D2E0A1AD3E8CF00C873FD /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		E23D2E0D1AD3E8CF00C873FD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		E23D2E0F1AD3E8CF00C873FD /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		E23D2E121AD3E8CF00C873FD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
@@ -63,6 +63,8 @@
 		E23D2E3E1AD3F77400C873FD /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
 		E23D2E401AD3F79300C873FD /* libsqlite3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.dylib; path = usr/lib/libsqlite3.dylib; sourceTree = SDKROOT; };
 		E23D2E421AD3FA5700C873FD /* YOUTIR-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "YOUTIR-Bridging-Header.h"; sourceTree = "<group>"; };
+		E24B7C591AD972670026E63B /* RequestFormViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RequestFormViewController.swift; sourceTree = "<group>"; };
+		E24B7C5B1AD9AAB20026E63B /* QuotesFeedViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuotesFeedViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -129,7 +131,8 @@
 			isa = PBXGroup;
 			children = (
 				E23D2E081AD3E8CF00C873FD /* AppDelegate.swift */,
-				E23D2E0A1AD3E8CF00C873FD /* ViewController.swift */,
+				E24B7C591AD972670026E63B /* RequestFormViewController.swift */,
+				E24B7C5B1AD9AAB20026E63B /* QuotesFeedViewController.swift */,
 				E23D2E0C1AD3E8CF00C873FD /* Main.storyboard */,
 				E23D2E0F1AD3E8CF00C873FD /* Images.xcassets */,
 				E23D2E111AD3E8CF00C873FD /* LaunchScreen.xib */,
@@ -266,8 +269,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E23D2E0B1AD3E8CF00C873FD /* ViewController.swift in Sources */,
 				E23D2E091AD3E8CF00C873FD /* AppDelegate.swift in Sources */,
+				E24B7C5A1AD972670026E63B /* RequestFormViewController.swift in Sources */,
+				E24B7C5C1AD9AAB20026E63B /* QuotesFeedViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -472,6 +476,7 @@
 				E23D2E241AD3E8CF00C873FD /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		E23D2E251AD3E8CF00C873FD /* Build configuration list for PBXNativeTarget "YOUTIRTests" */ = {
 			isa = XCConfigurationList;
@@ -480,6 +485,7 @@
 				E23D2E271AD3E8CF00C873FD /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
