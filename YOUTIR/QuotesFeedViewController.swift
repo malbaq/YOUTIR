@@ -12,12 +12,16 @@ class QuotesFeedViewController: UIViewController, UITableViewDataSource, UITable
 
     @IBOutlet var tableView: UITableView!
     
+    //демо массив
+    var arrayOfQuotes: [Quote] = [Quote]()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        
-
         // Do any additional setup after loading the view.
+        
+        //демо массив
+        self.setUpQuotes()
     }
 
     override func didReceiveMemoryWarning() {
@@ -26,7 +30,8 @@ class QuotesFeedViewController: UIViewController, UITableViewDataSource, UITable
     }
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 5
+        //демо массив
+        return arrayOfQuotes.count
     }
     
     // Row display. Implementers should *always* try to reuse cells by setting each cell's reuseIdentifier and querying for available reusable cells with dequeueReusableCellWithIdentifier:
@@ -34,11 +39,33 @@ class QuotesFeedViewController: UIViewController, UITableViewDataSource, UITable
     
     //fake style cell, just to let it compile
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = UITableViewCell(style: UITableViewCellStyle.Default, reuseIdentifier: "cell")
-        return cell
+        
+        let quoteCell: QuoteTableViewCell = tableView.dequeueReusableCellWithIdentifier("quoteCell") as! QuoteTableViewCell
+        
+        let quote = arrayOfQuotes[indexPath.row]
+        
+        quoteCell.setQuoteCell(quote.carrierName, transitRate: quote.transitRate, transitTime: quote.transitTime, logoImagePath: quote.logoImagePath)
+        
+        // Переменная с членом массива, или просто объектом ставки (модель).
+        // Распихиваем этот объект с его свойствами по вью, через ссылки контроллера.
+        
+        if indexPath.row % 2 == 0 {
+            quoteCell.backgroundColor = UIColor.blueColor()
+        } else {
+            quoteCell.backgroundColor = UIColor.redColor()
+        }
+        
+        return quoteCell
     }
-
     
+    //устанавливаем демо массив
+    func setUpQuotes() {
+        var quote1 = Quote(carrierID: "CarrierID#1", carrierName: "PFX", transitRate: 5000, transitTime: 7, logoImagePath: "1.jpg")
+        var quote2 = Quote(carrierID: "CarrierID#2", carrierName: "PECOM", transitRate: 6500, transitTime: 8, logoImagePath: "2.jpg")
+        
+        arrayOfQuotes.append(quote1)
+        arrayOfQuotes.append(quote2)
+    }
 
     /*
     // MARK: - Navigation

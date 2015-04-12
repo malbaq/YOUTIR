@@ -27,6 +27,8 @@
 		E23D2E411AD3F79300C873FD /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = E23D2E401AD3F79300C873FD /* libsqlite3.dylib */; };
 		E24B7C5A1AD972670026E63B /* RequestFormViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E24B7C591AD972670026E63B /* RequestFormViewController.swift */; };
 		E24B7C5C1AD9AAB20026E63B /* QuotesFeedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E24B7C5B1AD9AAB20026E63B /* QuotesFeedViewController.swift */; };
+		E24B7C5E1ADA9EE90026E63B /* QuoteTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E24B7C5D1ADA9EE90026E63B /* QuoteTableViewCell.swift */; };
+		E24B7C601ADADEFE0026E63B /* QuoteModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E24B7C5F1ADADEFE0026E63B /* QuoteModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -65,6 +67,8 @@
 		E23D2E421AD3FA5700C873FD /* YOUTIR-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "YOUTIR-Bridging-Header.h"; sourceTree = "<group>"; };
 		E24B7C591AD972670026E63B /* RequestFormViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RequestFormViewController.swift; sourceTree = "<group>"; };
 		E24B7C5B1AD9AAB20026E63B /* QuotesFeedViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuotesFeedViewController.swift; sourceTree = "<group>"; };
+		E24B7C5D1ADA9EE90026E63B /* QuoteTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuoteTableViewCell.swift; sourceTree = "<group>"; };
+		E24B7C5F1ADADEFE0026E63B /* QuoteModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuoteModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -133,6 +137,8 @@
 				E23D2E081AD3E8CF00C873FD /* AppDelegate.swift */,
 				E24B7C591AD972670026E63B /* RequestFormViewController.swift */,
 				E24B7C5B1AD9AAB20026E63B /* QuotesFeedViewController.swift */,
+				E24B7C5D1ADA9EE90026E63B /* QuoteTableViewCell.swift */,
+				E24B7C5F1ADADEFE0026E63B /* QuoteModel.swift */,
 				E23D2E0C1AD3E8CF00C873FD /* Main.storyboard */,
 				E23D2E0F1AD3E8CF00C873FD /* Images.xcassets */,
 				E23D2E111AD3E8CF00C873FD /* LaunchScreen.xib */,
@@ -269,6 +275,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E24B7C601ADADEFE0026E63B /* QuoteModel.swift in Sources */,
+				E24B7C5E1ADA9EE90026E63B /* QuoteTableViewCell.swift in Sources */,
 				E23D2E091AD3E8CF00C873FD /* AppDelegate.swift in Sources */,
 				E24B7C5A1AD972670026E63B /* RequestFormViewController.swift in Sources */,
 				E24B7C5C1AD9AAB20026E63B /* QuotesFeedViewController.swift in Sources */,
