@@ -60,8 +60,8 @@ class QuotesFeedViewController: UIViewController, UITableViewDataSource, UITable
     
     //устанавливаем демо массив
     func setUpQuotes() {
-        var quote1 = Quote(carrierID: "CarrierID#1", carrierName: "PFX", transitRate: 5000, transitTime: 7, logoImagePath: "1.jpg")
-        var quote2 = Quote(carrierID: "CarrierID#2", carrierName: "PECOM", transitRate: 6500, transitTime: 8, logoImagePath: "2.jpg")
+        var quote1 = Quote(carrierID: "CarrierID#1", carrierName: "PFX", transitRate: 5000, transitTime: 7, logoImagePath: "carrierName1.png")
+        var quote2 = Quote(carrierID: "CarrierID#2", carrierName: "Moonlight", transitRate: 6500, transitTime: 8, logoImagePath: "carrierName2.png")
         
         arrayOfQuotes.append(quote1)
         arrayOfQuotes.append(quote2)
