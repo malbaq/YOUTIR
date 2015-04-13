@@ -9,7 +9,21 @@
 import UIKit
 
 class RequestFormViewController: UIViewController {
-
+    
+    @IBOutlet var fromCityTextField: UITextField!
+    @IBOutlet var toCityTextField: UITextField!
+    @IBOutlet var weightTextField: UITextField!
+    @IBOutlet var lengthTextField: UITextField!
+    @IBOutlet var widthTextField: UITextField!
+    @IBOutlet var heightTextField: UITextField!
+    @IBOutlet var insuranceTextField: UITextField!
+    
+    //reset all performing
+    
+    //prepare for segue getQuotes
+//  Кликаем “show…”, Запускается спинер, Вызываем cloud func, Сервер рассылает по carriers’ api requests, Get the data, Send that to client, Мы распихиваем его по properties of quotes and detail VCs, Убираем спинер, Запускаем quotesVC. // Download the Instagram app from Udemy to learn the spinner.
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 

@@ -110,7 +110,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Carrier Web" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9vE-0H-9Ub">
-                                <rect key="frame" x="320" y="241" width="147" height="31"/>
+                                <rect key="frame" x="225" y="241" width="147" height="31"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
@@ -263,12 +263,22 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" id="AHR-JB-C2M">
-                        <barButtonItem key="rightBarButtonItem" title="Get Quotes" id="CgB-VE-Dzf">
+                        <barButtonItem key="leftBarButtonItem" title="Reset All" id="CgB-VE-Dzf"/>
+                        <barButtonItem key="rightBarButtonItem" title="Get it!" id="d3Y-Gq-Fef">
                             <connections>
-                                <segue destination="JAf-TU-Tt8" kind="presentation" id="dHC-at-UmY"/>
+                                <segue destination="JAf-TU-Tt8" kind="presentation" identifier="getQuotes" id="WlT-3X-130"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="fromCityTextField" destination="2V5-ah-o50" id="lEW-sa-1O0"/>
+                        <outlet property="heightTextField" destination="6el-yc-1DP" id="aHM-lX-cQd"/>
+                        <outlet property="insuranceTextField" destination="5jL-WU-Q9i" id="Oz3-5m-Jd1"/>
+                        <outlet property="lengthTextField" destination="aMj-ai-2Yv" id="K9w-d4-BWJ"/>
+                        <outlet property="toCityTextField" destination="jso-pC-0Sp" id="ZQj-dk-qn6"/>
+                        <outlet property="weightTextField" destination="xk2-bE-gRj" id="vcW-st-BmU"/>
+                        <outlet property="widthTextField" destination="tsi-MW-DKT" id="Mxx-AZ-0dV"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="idx-Sj-ogq" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
