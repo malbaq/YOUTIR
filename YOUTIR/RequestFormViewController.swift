@@ -8,7 +8,12 @@
 
 import UIKit
 
-class RequestFormViewController: UIViewController {
+//Надо из общих функциональностей:
+//1. Управление клавой
+//2. Ресет олл
+//3. Спиннер
+
+class RequestFormViewController: UIViewController, UITextFieldDelegate {
     
     @IBOutlet var fromCityTextField: UITextField!
     @IBOutlet var toCityTextField: UITextField!
@@ -33,6 +38,23 @@ class RequestFormViewController: UIViewController {
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    
+    //Скрыть клаву по клику
+    override func touchesBegan(touches: Set<NSObject>, withEvent event: UIEvent) {
+        self.view.endEditing(true)
+    }
+    
+    // called when 'return' key pressed to СКРЫТЬ КЛАВУ. return NO to ignore.
+    func textFieldShouldReturn(textField: UITextField) -> Bool {
+        fromCityTextField.resignFirstResponder()
+        toCityTextField.resignFirstResponder()
+        weightTextField.resignFirstResponder()
+        lengthTextField.resignFirstResponder()
+        widthTextField.resignFirstResponder()
+        heightTextField.resignFirstResponder()
+        insuranceTextField.resignFirstResponder()
+        return true
     }
     
 
