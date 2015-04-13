@@ -14,12 +14,16 @@ class Quote {
     var transitRate : Int
     var transitTime : Int
     var logoImagePath : String
+    var carrierTel : Int
+    var carrierWeb : String
     
-    init(carrierID: String, carrierName: String, transitRate: Int, transitTime: Int, logoImagePath: String) {
+    init(carrierID: String, carrierName: String, transitRate: Int, transitTime: Int, logoImagePath: String, carrierTel: Int, carrierWeb: String) {
         self.carrierID = carrierID
         self.carrierName = carrierName
         self.transitRate = transitRate
         self.transitTime = transitTime
         self.logoImagePath = logoImagePath
+        self.carrierTel = carrierTel
+        self.carrierWeb = carrierWeb
     }
 }
