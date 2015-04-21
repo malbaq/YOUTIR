@@ -32,6 +32,7 @@
 		E24B7C631ADB17A30026E63B /* carrierName1.png in Resources */ = {isa = PBXBuildFile; fileRef = E24B7C611ADB17A30026E63B /* carrierName1.png */; };
 		E24B7C641ADB17A30026E63B /* carrierName2.png in Resources */ = {isa = PBXBuildFile; fileRef = E24B7C621ADB17A30026E63B /* carrierName2.png */; };
 		E24B7C661ADBE2810026E63B /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E24B7C651ADBE2810026E63B /* DetailViewController.swift */; };
+		E2D1C5771AE512FE00DBB3A8 /* RequestModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2D1C5761AE512FE00DBB3A8 /* RequestModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -75,6 +76,7 @@
 		E24B7C611ADB17A30026E63B /* carrierName1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = carrierName1.png; sourceTree = "<group>"; };
 		E24B7C621ADB17A30026E63B /* carrierName2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = carrierName2.png; sourceTree = "<group>"; };
 		E24B7C651ADBE2810026E63B /* DetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		E2D1C5761AE512FE00DBB3A8 /* RequestModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RequestModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -151,6 +153,7 @@
 				E23D2E0F1AD3E8CF00C873FD /* Images.xcassets */,
 				E23D2E111AD3E8CF00C873FD /* LaunchScreen.xib */,
 				E24B7C5F1ADADEFE0026E63B /* QuoteModel.swift */,
+				E2D1C5761AE512FE00DBB3A8 /* RequestModel.swift */,
 				E23D2E281AD3E94700C873FD /* Bolts.framework */,
 				E23D2E291AD3E94700C873FD /* Parse.framework */,
 				E23D2E061AD3E8CF00C873FD /* Supporting Files */,
@@ -290,6 +293,7 @@
 				E24B7C5E1ADA9EE90026E63B /* QuoteTableViewCell.swift in Sources */,
 				E23D2E091AD3E8CF00C873FD /* AppDelegate.swift in Sources */,
 				E24B7C661ADBE2810026E63B /* DetailViewController.swift in Sources */,
+				E2D1C5771AE512FE00DBB3A8 /* RequestModel.swift in Sources */,
 				E24B7C5A1AD972670026E63B /* RequestFormViewController.swift in Sources */,
 				E24B7C5C1AD9AAB20026E63B /* QuotesFeedViewController.swift in Sources */,
 			);

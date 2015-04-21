@@ -68,10 +68,9 @@ class RequestFormViewController: UIViewController, UITextFieldDelegate {
         if (segue.identifier == "showQuotesFeed") {
             let destinationVC: QuotesFeedViewController = segue.destinationViewController as! QuotesFeedViewController
             
-            destinationVC.arrayOfQuotes =
+            //destinationVC.arrayOfQuotes =
         }
     }
-    
     
     @IBAction func getQuotes(sender: AnyObject) {
         //prepare for segue getQuotes
