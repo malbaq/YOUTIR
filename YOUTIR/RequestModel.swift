@@ -25,11 +25,12 @@ class Request : PFObject, PFSubclassing {
         }
     }
     
-    static func parseClassName() -> String! {
+    static func parseClassName() -> String {
         return "Request"
     }
     
     init(fromCity: String, toCity: String, weight: Int, length: Int, width: Int, height: Int, insurance: Int) {
+        super.init(className: Request.parseClassName())
         self.fromCity = fromCity
         self.toCity = toCity
         self.weight = weight
