@@ -8,16 +8,28 @@
 
 import Foundation
 
-class Quote {
-    var carrierID : String
-    var carrierName : String
-    var transitRate : Int
-    var transitTime : Int
-    var logoImagePath : String
-    var carrierTel : Int
-    var carrierWeb : String
+class Quote: PFObject, PFSubclassing {
+    @NSManaged var carrierID : String
+    @NSManaged var carrierName : String
+    @NSManaged var transitRate : Int
+    @NSManaged var transitTime : Int
+    @NSManaged var logoImagePath : String
+    @NSManaged var carrierTel : Int
+    @NSManaged var carrierWeb : String
+    
+    override class func initialize() {
+        var onceToken : dispatch_once_t = 0;
+        dispatch_once(&onceToken) {
+            self.registerSubclass()
+        }
+    }
+    
+    static func parseClassName() -> String {
+        return "Quote"
+    }
     
     init(carrierID: String, carrierName: String, transitRate: Int, transitTime: Int, logoImagePath: String, carrierTel: Int, carrierWeb: String) {
+        super.init()
         self.carrierID = carrierID
         self.carrierName = carrierName
         self.transitRate = transitRate

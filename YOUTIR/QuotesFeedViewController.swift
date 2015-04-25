@@ -12,6 +12,10 @@ class QuotesFeedViewController: UIViewController, UITableViewDataSource, UITable
 
     @IBOutlet var tableView: UITableView!
     
+    //Transfer current request ID
+    
+    var requestID = String()
+    
     //демо массив
     var arrayOfQuotes: [Quote] = [Quote]()
     
@@ -90,8 +94,23 @@ class QuotesFeedViewController: UIViewController, UITableViewDataSource, UITable
     
     //устанавливаем демо массив
     func setUpQuotes() {
+        
+        var query = Quote.query()
+        query!.whereKey(requestID, equalTo: requestID)
+        
+        query!.findObjectsInBackgroundWithBlock { (objects: [AnyObject]?, error: NSError?) -> Void in
+            if error == nil {
+                if let objects = objects as? [Quote], firstArmor = objects.first {
+                    //...
+                }
+            }
+        }
+        
+        // PFQuery ...
+        
         var quote1 = Quote(carrierID: "CarrierID#1", carrierName: "PFX", transitRate: 5000, transitTime: 7, logoImagePath: "carrierName1.png", carrierTel: 74950000, carrierWeb: "http://pfx.com/")
         var quote2 = Quote(carrierID: "CarrierID#2", carrierName: "Moonlight", transitRate: 6500, transitTime: 8, logoImagePath: "carrierName2.png", carrierTel: 78120000, carrierWeb: "http://blabla.com/")
+        quote2.save()
         
         arrayOfQuotes.append(quote1)
         arrayOfQuotes.append(quote2)

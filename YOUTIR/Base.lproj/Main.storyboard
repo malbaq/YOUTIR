@@ -284,11 +284,14 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" id="AHR-JB-C2M">
-                        <barButtonItem key="leftBarButtonItem" title="Reset All" id="CgB-VE-Dzf"/>
+                        <barButtonItem key="leftBarButtonItem" title="Reset All" id="CgB-VE-Dzf">
+                            <connections>
+                                <action selector="resetAll:" destination="IYu-C4-5LA" id="DNG-bx-icp"/>
+                            </connections>
+                        </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" title="Get it!" id="d3Y-Gq-Fef">
                             <connections>
-                                <action selector="getQuotes:" destination="IYu-C4-5LA" id="TNA-2I-9zk"/>
-                                <segue destination="JAf-TU-Tt8" kind="presentation" identifier="showQuotesFeed" id="uUN-ba-OjK"/>
+                                <action selector="sendRequest:" destination="IYu-C4-5LA" id="Q4g-WB-bnz"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -300,6 +303,7 @@
                         <outlet property="toCityTextField" destination="jso-pC-0Sp" id="ZQj-dk-qn6"/>
                         <outlet property="weightTextField" destination="xk2-bE-gRj" id="vcW-st-BmU"/>
                         <outlet property="widthTextField" destination="tsi-MW-DKT" id="Mxx-AZ-0dV"/>
+                        <segue destination="JAf-TU-Tt8" kind="presentation" identifier="showQuotesFeed" id="EwB-YO-FaE"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="idx-Sj-ogq" userLabel="First Responder" sceneMemberID="firstResponder"/>

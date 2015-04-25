@@ -30,11 +30,12 @@ class Request : PFObject, PFSubclassing {
     }
     
     init(fromCity: String, toCity: String, weight: Int, length: Int, width: Int, height: Int, insurance: Int) {
-        super.init(className: Request.parseClassName())
+        super.init()
         self.fromCity = fromCity
         self.toCity = toCity
         self.weight = weight
         self.length = length
+        self.width = width
         self.height = height
         self.insurance = insurance
     }

@@ -8,16 +8,6 @@
 
 import UIKit
 
-//Надо из общих функциональностей:
-//1. Управление клавой +++
-//2. Ресет олл SKIPPED, Не критично
-//3. Спиннер, скиппед
-//4. Центровка вью при появлении клавы, скиппед
-//5.
-//6.
-//7.
-//8. 
-
 class RequestFormViewController: UIViewController, UITextFieldDelegate {
     
     @IBOutlet var fromCityTextField: UITextField!
@@ -27,8 +17,6 @@ class RequestFormViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet var widthTextField: UITextField!
     @IBOutlet var heightTextField: UITextField!
     @IBOutlet var insuranceTextField: UITextField!
-    
-    //reset all
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -57,12 +45,11 @@ class RequestFormViewController: UIViewController, UITextFieldDelegate {
         insuranceTextField.resignFirstResponder()
         return true
     }
-
     
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+   /* override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         // Get the new view controller using segue.destinationViewController.
         // Pass the selected object to the new view controller.
         if (segue.identifier == "showQuotesFeed") {
@@ -70,50 +57,44 @@ class RequestFormViewController: UIViewController, UITextFieldDelegate {
             
             //destinationVC.arrayOfQuotes =
         }
+    }*/
+    
+    @IBAction func sendRequest(sender: AnyObject) {
+        
+        // Проверяем общзательные для заполнения поля
+        /*
+        if fromCityTextField.text == nil || toCityTextField.text == nil || weightTextField.text == nil || lengthTextField.text == nil || widthTextField.text == nil || heightTextField.text == nil || insuranceTextField.text == nil  {
+            alert
+            println ("fucking arbeiten")
+        } else {
+            see below
+        }
+        */
+        
+        // Запускается спинер
+        
+        var weight = weightTextField.text.toInt()!
+        var length = lengthTextField.text.toInt()!
+        var width = widthTextField.text.toInt()!
+        var height = heightTextField.text.toInt()!
+        var insurance = insuranceTextField.text.toInt()!
+        
+        var request = Request(fromCity: fromCityTextField.text, toCity: toCityTextField.text, weight: weight, length: length, width: width, height: height, insurance: insurance)
+        request.save()
+        
+        self.performSegueWithIdentifier("showQuotesFeed", sender: self)
+
     }
     
-    @IBAction func getQuotes(sender: AnyObject) {
-        //prepare for segue getQuotes
-        
-        //  Кликаем “show…”
-        
-        // Проверяем общзательные для заполнения поля 
-        
-        // Запускается спинер,
-        
-        // Создаем словарь с параметрами запроса пользователя
-        var requestParam = [
-            "origin" : fromCityTextField.text,
-            "destination" : toCityTextField.text,
-            "weight" : weightTextField.text,
-            "length" : lengthTextField.text,
-            "width" : widthTextField.text,
-            "height" : heightTextField.text,
-            "insurance" : insuranceTextField.text
-        ]
-        
-        println(requestParam)
-        
-        // Вызываем cloud func и передаем ей пользовательский запрос
-        let cloudFunctionResponse : AnyObject! = PFCloud.callFunction("getQuotes", withParameters: requestParam as [NSObject : AnyObject])
-        
-        println(cloudFunctionResponse)
-
-        //Сервер рассылает по carriers’ api requests, Get the data back,
-        
-        //Send that to client, 
-        
-        //Мы распихиваем его по properties of quotes and detail VCs, 
-        
-        
-        
-        //Убираем спинер, 
-        
-        //Запускаем quotesVC. 
-        
-        // Download the Instagram app from Udemy to learn the spinner.
-
-        
+    
+    @IBAction func resetAll(sender: AnyObject) {
+        fromCityTextField.text = nil
+        toCityTextField.text = nil
+        weightTextField.text = nil
+        lengthTextField.text = nil
+        widthTextField.text = nil
+        heightTextField.text = nil
+        insuranceTextField.text = nil
     }
 
 }
