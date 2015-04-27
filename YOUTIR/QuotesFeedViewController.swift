@@ -12,9 +12,9 @@ class QuotesFeedViewController: UIViewController, UITableViewDataSource, UITable
 
     @IBOutlet var tableView: UITableView!
     
-    //Transfer current request ID
+    //Transfer current request
+    var request: Request!
     
-    var requestID = String()
     
     //демо массив
     var arrayOfQuotes: [Quote] = [Quote]()
@@ -26,6 +26,7 @@ class QuotesFeedViewController: UIViewController, UITableViewDataSource, UITable
         
         //демо массив
         self.setUpQuotes()
+        println("the \(request) value is in request")
     }
 
     override func didReceiveMemoryWarning() {
@@ -96,24 +97,26 @@ class QuotesFeedViewController: UIViewController, UITableViewDataSource, UITable
     func setUpQuotes() {
         
         var query = Quote.query()
-        query!.whereKey(requestID, equalTo: requestID)
+        query!.whereKey("Request", equalTo: request)
         
         query!.findObjectsInBackgroundWithBlock { (objects: [AnyObject]?, error: NSError?) -> Void in
             if error == nil {
-                if let objects = objects as? [Quote], firstArmor = objects.first {
-                    //...
+                if let objects = objects as? [Quote] {
+                    for object in objects {
+                        self.arrayOfQuotes.append(object)
+                    }
                 }
             }
         }
         
         // PFQuery ...
         
-        var quote1 = Quote(carrierID: "CarrierID#1", carrierName: "PFX", transitRate: 5000, transitTime: 7, logoImagePath: "carrierName1.png", carrierTel: 74950000, carrierWeb: "http://pfx.com/")
-        var quote2 = Quote(carrierID: "CarrierID#2", carrierName: "Moonlight", transitRate: 6500, transitTime: 8, logoImagePath: "carrierName2.png", carrierTel: 78120000, carrierWeb: "http://blabla.com/")
-        quote2.save()
-        
-        arrayOfQuotes.append(quote1)
-        arrayOfQuotes.append(quote2)
+//        var quote1 = Quote(carrierID: "CarrierID#1", carrierName: "PFX", transitRate: 5000, transitTime: 7, logoImagePath: "carrierName1.png", carrierTel: 74950000, carrierWeb: "http://pfx.com/")
+//        var quote2 = Quote(carrierID: "CarrierID#2", carrierName: "Moonlight", transitRate: 6500, transitTime: 8, logoImagePath: "carrierName2.png", carrierTel: 78120000, carrierWeb: "http://blabla.com/")
+//        quote2.save()
+//        
+//        arrayOfQuotes.append(quote1)
+//        arrayOfQuotes.append(quote2)
     }
 
     /*
