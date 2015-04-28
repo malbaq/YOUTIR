@@ -29,8 +29,12 @@ class Request : PFObject, PFSubclassing {
         return "Request"
     }
     
-    init(fromCity: String, toCity: String, weight: Int, length: Int, width: Int, height: Int, insurance: Int) {
+    override init() {
         super.init()
+    }
+    
+    convenience init(fromCity: String, toCity: String, weight: Int, length: Int, width: Int, height: Int, insurance: Int) {
+        self.init()
         self.fromCity = fromCity
         self.toCity = toCity
         self.weight = weight

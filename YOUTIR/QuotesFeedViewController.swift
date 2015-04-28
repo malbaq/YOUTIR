@@ -1,10 +1,9 @@
-//
 //  QuotesFeedViewController.swift
 //  YOUTIR
 //
 //  Created by Tom Malary on 4/11/15.
 //  Copyright (c) 2015 YOUTIR LLC. All rights reserved.
-//
+
 
 import UIKit
 
@@ -12,35 +11,23 @@ class QuotesFeedViewController: UIViewController, UITableViewDataSource, UITable
 
     @IBOutlet var tableView: UITableView!
     
-    //Transfer current request
     var request: Request!
     
-    
-    //демо массив
     var arrayOfQuotes: [Quote] = [Quote]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        // Do any additional setup after loading the view.
-        
-        //демо массив
         self.setUpQuotes()
-        println("the \(request) value is in request")
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        //демо массив
         return arrayOfQuotes.count
     }
-    
-    // Row display. Implementers should *always* try to reuse cells by setting each cell's reuseIdentifier and querying for available reusable cells with dequeueReusableCellWithIdentifier:
-    // Cell gets various attributes set automatically based on table (separators) and data source (accessory views, editing controls)
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         
@@ -49,9 +36,6 @@ class QuotesFeedViewController: UIViewController, UITableViewDataSource, UITable
         let quote = arrayOfQuotes[indexPath.row]
         
         quoteCell.setQuoteCell(quote.carrierName, transitRate: quote.transitRate, transitTime: quote.transitTime, logoImagePath: quote.logoImagePath)
-        
-        // Переменная с членом массива, или просто объектом ставки (модель).
-        // Распихиваем этот объект с его свойствами по вью, через ссылки контроллера.
         
         if indexPath.row % 2 == 0 {
             quoteCell.backgroundColor = UIColor.blueColor()
@@ -76,28 +60,11 @@ class QuotesFeedViewController: UIViewController, UITableViewDataSource, UITable
         self.presentViewController(detailViewController, animated: true, completion: nil)
     }
 
-    
-    
-// Удаление ROWs by Swipping left
-//    func tableView(tableView: UITableView, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath) {
-//        if editingStyle == .Delete {
-//            
-//            arrayOfQuotes.removeAtIndex(indexPath.row)
-//            self.tableView.reloadData()
-//            
-//            // Delete the row from the data source
-//            //tableView.deleteRowsAtIndexPaths([indexPath], withRowAnimation: .Fade)
-//        }
-//    }
-    
-    
-
-    
-    //устанавливаем демо массив
     func setUpQuotes() {
         
         var query = Quote.query()
-        query!.whereKey("Request", equalTo: request)
+        
+        query!.whereKey("transitTime", equalTo: 8)
         
         query!.findObjectsInBackgroundWithBlock { (objects: [AnyObject]?, error: NSError?) -> Void in
             if error == nil {
@@ -106,6 +73,8 @@ class QuotesFeedViewController: UIViewController, UITableViewDataSource, UITable
                         self.arrayOfQuotes.append(object)
                     }
                 }
+                self.arrayOfQuotes = objects as! [Quote]
+                println("the first quote is \(self.arrayOfQuotes)")
             }
         }
         
@@ -128,5 +97,4 @@ class QuotesFeedViewController: UIViewController, UITableViewDataSource, UITable
         // Pass the selected object to the new view controller.
     }
     */
-
 }

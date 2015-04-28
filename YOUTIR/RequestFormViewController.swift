@@ -52,6 +52,10 @@ class RequestFormViewController: UIViewController, UITextFieldDelegate {
     
     func textFieldDidEndEditing(textField: UITextField) {
         if textField.text.isEmpty {
+            
+//            textField.layer.borderWidth = 1.0
+//            textField.layer.borderColor = UIColor.redColor().CGColor
+            
             textField.backgroundColor = UIColor.redColor()
         }
     }
@@ -101,19 +105,20 @@ class RequestFormViewController: UIViewController, UITextFieldDelegate {
         
             request = Request(fromCity: fromCityTextField.text, toCity: toCityTextField.text, weight: weight, length: length, width: width, height: height, insurance: insurance)
             request!.save()
-        
+            //save in background...
+            
             self.performSegueWithIdentifier("showQuotesFeed", sender: self)
         }
     }
     
     
     @IBAction func resetAll(sender: AnyObject) {
-        fromCityTextField.text = nil
-        toCityTextField.text = nil
-        weightTextField.text = nil
-        lengthTextField.text = nil
-        widthTextField.text = nil
-        heightTextField.text = nil
-        insuranceTextField.text = nil
+        fromCityTextField.text = ""
+        toCityTextField.text = ""
+        weightTextField.text = ""
+        lengthTextField.text = ""
+        widthTextField.text = ""
+        heightTextField.text = ""
+        insuranceTextField.text = ""
     }
 }

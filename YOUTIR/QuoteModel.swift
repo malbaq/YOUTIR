@@ -28,8 +28,12 @@ class Quote: PFObject, PFSubclassing {
         return "Quote"
     }
     
-    init(carrierID: String, carrierName: String, transitRate: Int, transitTime: Int, logoImagePath: String, carrierTel: Int, carrierWeb: String) {
+    override init() {
         super.init()
+    }
+
+    convenience init(carrierID: String, carrierName: String, transitRate: Int, transitTime: Int, logoImagePath: String, carrierTel: Int, carrierWeb: String) {
+        self.init()
         self.carrierID = carrierID
         self.carrierName = carrierName
         self.transitRate = transitRate
