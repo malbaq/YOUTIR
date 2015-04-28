@@ -68,11 +68,11 @@ class QuotesFeedViewController: UIViewController, UITableViewDataSource, UITable
         
         query!.findObjectsInBackgroundWithBlock { (objects: [AnyObject]?, error: NSError?) -> Void in
             if error == nil {
-                if let objects = objects as? [Quote] {
-                    for object in objects {
-                        self.arrayOfQuotes.append(object)
-                    }
-                }
+//                if let objects = objects as? [Quote] {
+//                    for object in objects {
+//                        self.arrayOfQuotes.append(object)
+//                    }
+//                }
                 self.arrayOfQuotes = objects as! [Quote]
                 println("the first quote is \(self.arrayOfQuotes)")
             }
