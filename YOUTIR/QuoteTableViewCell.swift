@@ -24,11 +24,10 @@ class QuoteTableViewCell: UITableViewCell {
         // Configure the view for the selected state
     }
     
-    func setQuoteCell(carrierName: String, transitRate: Int, transitTime: Int, logoImagePath: String){
+    func setQuoteCell(carrierName: String, transitRate: Int, transitTime: Int, logoImage: NSData){
         self.carrierName.text = carrierName
         self.transitRate.text = String(transitRate)
         self.transitTime.text = String(transitTime)
-        self.logoImage.image = UIImage(named: logoImagePath)
+        self.logoImage.image = UIImage(data: logoImage)
     }
-    
 }

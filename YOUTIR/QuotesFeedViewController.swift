@@ -39,7 +39,17 @@ class QuotesFeedViewController: UIViewController, UITableViewDataSource, UITable
         
         let quote = arrayOfQuotes[indexPath.row]
         
-        quoteCell.setQuoteCell(quote.carrierName, transitRate: quote.transitRate, transitTime: quote.transitTime, logoImagePath: quote.logoImagePath)
+//        //to convert logoImage from PFFile to NSData
+//        // var imageData : NSData?
+//        var logoImage = quote.carrier.logoImage as PFFile
+//        logoImage.getDataInBackgroundWithBlock {
+//            (imageData: NSData?, error: NSError?) -> Void in
+//            if error == nil {
+//                var imageData = imageData
+//            }
+//        }
+        
+        quoteCell.setQuoteCell(quote.carrier.name, transitRate: quote.transitRate, transitTime: quote.transitTime, logoImage: )
         
         if indexPath.row % 2 == 0 {
             quoteCell.backgroundColor = UIColor.blueColor()
@@ -54,12 +64,12 @@ class QuotesFeedViewController: UIViewController, UITableViewDataSource, UITable
         let quote = arrayOfQuotes[indexPath.row]
         var detailViewController: DetailViewController = self.storyboard?.instantiateViewControllerWithIdentifier("DetailViewController")as! DetailViewController
         
-        detailViewController.carrierName = quote.carrierName
+        detailViewController.carrierName = quote.carrier.name
         detailViewController.transitRate = quote.transitRate
         detailViewController.transitTime = quote.transitTime
-        detailViewController.logoImagePath = quote.logoImagePath
-        detailViewController.carrierTel = quote.carrierTel
-        detailViewController.carrierWeb = quote.carrierWeb
+//        detailViewController.logoImagePath = quote.carrier.logoImage
+        detailViewController.carrierTel = quote.carrier.telephone
+        detailViewController.carrierWeb = quote.carrier.web
         
         self.presentViewController(detailViewController, animated: true, completion: nil)
     }
@@ -68,7 +78,7 @@ class QuotesFeedViewController: UIViewController, UITableViewDataSource, UITable
         
         var query = Quote.query()
         
-        query!.whereKey("carrierID", equalTo: "CarrierID#1")
+        query!.whereKey("transitRate", greaterThanOrEqualTo: 6500)
         
         query!.findObjectsInBackgroundWithBlock { (objects: [AnyObject]?, error: NSError?) -> Void in
             if error == nil {

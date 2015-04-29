@@ -24,7 +24,7 @@ class DetailViewController: UIViewController {
     var transitRate: Int?
     var transitTime: Int?
     var logoImagePath: String?
-    var carrierTel: Int?
+    var carrierTel: String?
     var carrierWeb: String?
     
     override func viewDidLoad() {

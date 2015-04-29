@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		E234771B1AEFB88E00ADE6C4 /* CarrierModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E234771A1AEFB88E00ADE6C4 /* CarrierModel.swift */; };
+		E234771F1AF12DFC00ADE6C4 /* Comments.swift in Sources */ = {isa = PBXBuildFile; fileRef = E234771E1AF12DFC00ADE6C4 /* Comments.swift */; };
 		E23D2E091AD3E8CF00C873FD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E23D2E081AD3E8CF00C873FD /* AppDelegate.swift */; };
 		E23D2E0E1AD3E8CF00C873FD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E23D2E0C1AD3E8CF00C873FD /* Main.storyboard */; };
 		E23D2E101AD3E8CF00C873FD /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E23D2E0F1AD3E8CF00C873FD /* Images.xcassets */; };
@@ -48,6 +49,7 @@
 
 /* Begin PBXFileReference section */
 		E234771A1AEFB88E00ADE6C4 /* CarrierModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CarrierModel.swift; sourceTree = "<group>"; };
+		E234771E1AF12DFC00ADE6C4 /* Comments.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Comments.swift; sourceTree = "<group>"; };
 		E23D2E031AD3E8CF00C873FD /* YOUTIR.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = YOUTIR.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E23D2E071AD3E8CF00C873FD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E23D2E081AD3E8CF00C873FD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -161,6 +163,7 @@
 				E23D2E291AD3E94700C873FD /* Parse.framework */,
 				E23D2E061AD3E8CF00C873FD /* Supporting Files */,
 				E23D2E421AD3FA5700C873FD /* YOUTIR-Bridging-Header.h */,
+				E234771E1AF12DFC00ADE6C4 /* Comments.swift */,
 			);
 			path = YOUTIR;
 			sourceTree = "<group>";
@@ -294,6 +297,7 @@
 			files = (
 				E24B7C601ADADEFE0026E63B /* QuoteModel.swift in Sources */,
 				E24B7C5E1ADA9EE90026E63B /* QuoteTableViewCell.swift in Sources */,
+				E234771F1AF12DFC00ADE6C4 /* Comments.swift in Sources */,
 				E23D2E091AD3E8CF00C873FD /* AppDelegate.swift in Sources */,
 				E24B7C661ADBE2810026E63B /* DetailViewController.swift in Sources */,
 				E2D1C5771AE512FE00DBB3A8 /* RequestModel.swift in Sources */,

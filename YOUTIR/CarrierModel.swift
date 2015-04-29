@@ -9,11 +9,11 @@
 import Foundation
 
 class Carrier: PFObject, PFSubclassing {
-    @NSManaged var carrierID : String
-    @NSManaged var carrierName : String
-    @NSManaged var logoImage: PFFile?
-    @NSManaged var carrierTel : Int
-    @NSManaged var carrierWeb : String
+    @NSManaged var youtirID: String
+    @NSManaged var name: String
+    @NSManaged var logoImage: PFFile
+    @NSManaged var telephone: String
+    @NSManaged var web: String
     
     override class func initialize() {
         var onceToken : dispatch_once_t = 0;
@@ -24,18 +24,5 @@ class Carrier: PFObject, PFSubclassing {
     
     static func parseClassName() -> String {
         return "Carrier"
-    }
-    
-    override init() {
-        super.init()
-    }
-    
-    convenience init(carrierID: String, carrierName: String, logoImage: PFFile, carrierTel: Int, carrierWeb: String) {
-        self.init()
-        self.carrierID = carrierID
-        self.carrierName = carrierName
-        self.logoImage = logoImage
-        self.carrierTel = carrierTel
-        self.carrierWeb = carrierWeb
     }
 }
