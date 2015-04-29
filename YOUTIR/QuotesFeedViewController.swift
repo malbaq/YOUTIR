@@ -13,7 +13,11 @@ class QuotesFeedViewController: UIViewController, UITableViewDataSource, UITable
     
     var request: Request!
     
-    var arrayOfQuotes: [Quote] = [Quote]()
+    var arrayOfQuotes: [Quote] = [Quote](){
+        didSet {
+            self.tableView.reloadData()
+        }
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -64,28 +68,16 @@ class QuotesFeedViewController: UIViewController, UITableViewDataSource, UITable
         
         var query = Quote.query()
         
-        query!.whereKey("transitTime", equalTo: 8)
+        query!.whereKey("carrierID", equalTo: "CarrierID#1")
         
         query!.findObjectsInBackgroundWithBlock { (objects: [AnyObject]?, error: NSError?) -> Void in
             if error == nil {
-//                if let objects = objects as? [Quote] {
-//                    for object in objects {
-//                        self.arrayOfQuotes.append(object)
-//                    }
-//                }
-                self.arrayOfQuotes = objects as! [Quote]
-                println("the first quote is \(self.arrayOfQuotes)")
+                if let objects = objects as? [Quote] {
+                    self.arrayOfQuotes = objects
+                }
+                println("the first quote is \(self.arrayOfQuotes[0])")
             }
         }
-        
-        // PFQuery ...
-        
-//        var quote1 = Quote(carrierID: "CarrierID#1", carrierName: "PFX", transitRate: 5000, transitTime: 7, logoImagePath: "carrierName1.png", carrierTel: 74950000, carrierWeb: "http://pfx.com/")
-//        var quote2 = Quote(carrierID: "CarrierID#2", carrierName: "Moonlight", transitRate: 6500, transitTime: 8, logoImagePath: "carrierName2.png", carrierTel: 78120000, carrierWeb: "http://blabla.com/")
-//        quote2.save()
-//        
-//        arrayOfQuotes.append(quote1)
-//        arrayOfQuotes.append(quote2)
     }
 
     /*

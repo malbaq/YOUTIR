@@ -162,6 +162,7 @@
                         <outlet property="carrierTelLabel" destination="JQ1-iP-tln" id="dCQ-E5-T9K"/>
                         <outlet property="carrierWebLabel" destination="9vE-0H-9Ub" id="rwG-HR-5Qf"/>
                         <outlet property="logoImage" destination="R57-LP-0iA" id="q21-ih-eB6"/>
+                        <outlet property="testRequestPointer" destination="e3h-3u-X5F" id="iLa-tQ-irG"/>
                         <outlet property="transitRateLabel" destination="rE0-5M-J4p" id="jEL-Pt-L9n"/>
                         <outlet property="transitTimeLabel" destination="Yn6-pN-nOa" id="ifk-je-j9M"/>
                     </connections>

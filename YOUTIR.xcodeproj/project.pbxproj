@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E234771B1AEFB88E00ADE6C4 /* CarrierModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E234771A1AEFB88E00ADE6C4 /* CarrierModel.swift */; };
 		E23D2E091AD3E8CF00C873FD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E23D2E081AD3E8CF00C873FD /* AppDelegate.swift */; };
 		E23D2E0E1AD3E8CF00C873FD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E23D2E0C1AD3E8CF00C873FD /* Main.storyboard */; };
 		E23D2E101AD3E8CF00C873FD /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E23D2E0F1AD3E8CF00C873FD /* Images.xcassets */; };
@@ -46,6 +47,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		E234771A1AEFB88E00ADE6C4 /* CarrierModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CarrierModel.swift; sourceTree = "<group>"; };
 		E23D2E031AD3E8CF00C873FD /* YOUTIR.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = YOUTIR.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E23D2E071AD3E8CF00C873FD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E23D2E081AD3E8CF00C873FD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -154,6 +156,7 @@
 				E23D2E111AD3E8CF00C873FD /* LaunchScreen.xib */,
 				E24B7C5F1ADADEFE0026E63B /* QuoteModel.swift */,
 				E2D1C5761AE512FE00DBB3A8 /* RequestModel.swift */,
+				E234771A1AEFB88E00ADE6C4 /* CarrierModel.swift */,
 				E23D2E281AD3E94700C873FD /* Bolts.framework */,
 				E23D2E291AD3E94700C873FD /* Parse.framework */,
 				E23D2E061AD3E8CF00C873FD /* Supporting Files */,
@@ -295,6 +298,7 @@
 				E24B7C661ADBE2810026E63B /* DetailViewController.swift in Sources */,
 				E2D1C5771AE512FE00DBB3A8 /* RequestModel.swift in Sources */,
 				E24B7C5A1AD972670026E63B /* RequestFormViewController.swift in Sources */,
+				E234771B1AEFB88E00ADE6C4 /* CarrierModel.swift in Sources */,
 				E24B7C5C1AD9AAB20026E63B /* QuotesFeedViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -16,6 +16,9 @@ class DetailViewController: UIViewController {
     @IBOutlet var logoImage: UIImageView!
     @IBOutlet var carrierTelLabel: UILabel!
     @IBOutlet var carrierWebLabel: UILabel!
+
+    //test the pointer, should be deleted later
+    @IBOutlet var testRequestPointer: UILabel!
     
     var carrierName: String?
     var transitRate: Int?
