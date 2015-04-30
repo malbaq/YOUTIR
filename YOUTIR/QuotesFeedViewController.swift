@@ -39,17 +39,7 @@ class QuotesFeedViewController: UIViewController, UITableViewDataSource, UITable
         
         let quote = arrayOfQuotes[indexPath.row]
         
-//        //to convert logoImage from PFFile to NSData
-//        // var imageData : NSData?
-//        var logoImage = quote.carrier.logoImage as PFFile
-//        logoImage.getDataInBackgroundWithBlock {
-//            (imageData: NSData?, error: NSError?) -> Void in
-//            if error == nil {
-//                var imageData = imageData
-//            }
-//        }
-        
-        quoteCell.setQuoteCell(quote.carrier.name, transitRate: quote.transitRate, transitTime: quote.transitTime, logoImageView: quote.carrier.logoImageView())
+        quoteCell.setQuote(quote)
         
         if indexPath.row % 2 == 0 {
             quoteCell.backgroundColor = UIColor.blueColor()
@@ -63,22 +53,17 @@ class QuotesFeedViewController: UIViewController, UITableViewDataSource, UITable
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         let quote = arrayOfQuotes[indexPath.row]
         var detailViewController: DetailViewController = self.storyboard?.instantiateViewControllerWithIdentifier("DetailViewController")as! DetailViewController
-        
-        detailViewController.carrierName = quote.carrier.name
-        detailViewController.transitRate = quote.transitRate
-        detailViewController.transitTime = quote.transitTime
-//        detailViewController.logoImagePath = quote.carrier.logoImage
-        detailViewController.carrierTel = quote.carrier.telephone
-        detailViewController.carrierWeb = quote.carrier.web
-        
-        self.presentViewController(detailViewController, animated: true, completion: nil)
+
+        detailViewController.quote = quote
+        self.navigationController?.pushViewController(detailViewController, animated: true)
+//        self.presentViewController(detailViewController, animated: true, completion: nil)
     }
 
     func setUpQuotes() {
         
         var query = Quote.query()
         
-        query!.whereKey("transitRate", greaterThanOrEqualTo: 6500)
+        query!.whereKey("transitRate", lessThanOrEqualTo: 6500)
         
         query!.findObjectsInBackgroundWithBlock { (objects: [AnyObject]?, error: NSError?) -> Void in
             if error == nil {

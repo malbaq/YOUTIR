@@ -24,14 +24,30 @@ class QuoteTableViewCell: UITableViewCell {
         // Configure the view for the selected state
     }
     
-//    func setQuote(quote: Quote){
-//        
-//    }
-    
-    func setQuoteCell(carrierName: String, transitRate: Int, transitTime: Int, logoImageView: PFImageView){
-        self.carrierName.text = carrierName
-        self.transitRate.text = String(transitRate)
-        self.transitTime.text = String(transitTime)
-        self.logoImage = logoImageView
+    func setQuote(quote: Quote){
+        quote.carrier.fetchIfNeeded()
+        self.carrierName.text = quote.carrier["name"] as! String
+        self.transitRate.text = String(quote.transitRate)
+        self.transitTime.text = String(quote.transitTime)
+        self.logoImage.image = UIImage(named: "placeholder")
+        
+        let logoImageFile = quote.carrier["logoImage"] as! PFFile
+        logoImageFile.getDataInBackgroundWithBlock {
+            (imageData: NSData?, error: NSError?) -> Void in
+            if error == nil {
+                if let imageData = imageData {
+                    self.logoImage.image = UIImage(data:imageData)
+                }
+            }
+        }
     }
+    
+    
+//    
+//    func setQuoteCell(carrierName: String, transitRate: Int, transitTime: Int, logoImageView: PFImageView){
+//        self.carrierName.text = carrierName
+//        self.transitRate.text = String(transitRate)
+//        self.transitTime.text = String(transitTime)
+//        self.logoImage = logoImageView
+//    }
 }

@@ -16,29 +16,37 @@ class DetailViewController: UIViewController {
     @IBOutlet var logoImage: PFImageView!
     @IBOutlet var carrierTelLabel: UILabel!
     @IBOutlet var carrierWebLabel: UILabel!
+    @IBOutlet var requestSpecsLabel: UILabel!
 
     //test the pointer, should be deleted later
     @IBOutlet var testRequestPointer: UILabel!
     
-    var carrierName: String?
-    var transitRate: Int?
-    var transitTime: Int?
-    var logoImagePath: String?
-    var carrierTel: String?
-    var carrierWeb: String?
+    var quote: Quote!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         // Do any additional setup after loading the view.
         
-        self.carrierNameLabel.text = carrierName
-        self.transitRateLabel.text = String(transitRate!)
-        self.transitTimeLabel.text = String(transitTime!)
-        self.logoImage.image = UIImage(named: logoImagePath!)
-        self.carrierTelLabel.text = String(carrierTel!)
-        self.carrierWebLabel.text = String(carrierWeb!)
+        quote.fetchIfNeeded()
+        self.carrierNameLabel.text = quote.carrier["name"] as! String
+        self.transitRateLabel.text = String(quote.transitRate)
+        self.transitTimeLabel.text = String(quote.transitTime)
+        self.carrierTelLabel.text = quote.carrier["telephone"] as! String
+        self.carrierWebLabel.text = quote.carrier["web"] as! String
+        self.logoImage.image = UIImage(named: "placeholder")
         
+        let logoImageFile = quote.carrier["logoImage"] as! PFFile
+        logoImageFile.getDataInBackgroundWithBlock {
+            (imageData: NSData?, error: NSError?) -> Void in
+            if error == nil {
+                if let imageData = imageData {
+                    self.logoImage.image = UIImage(data: imageData)
+                }
+            }
+        }
+        
+       
         // To check if PFUser != nil then show pay else show login using alpha method 0 or 1, or text and func of the same button + alpha for name of the user name and logout button alpha.
 
     }

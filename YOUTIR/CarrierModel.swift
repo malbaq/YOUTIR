@@ -15,12 +15,12 @@ class Carrier: PFObject, PFSubclassing {
     @NSManaged var telephone: String
     @NSManaged var web: String
     
-    func logoImageView() -> PFImageView {
-        let view = PFImageView(image: UIImage(named: "placeholder"))
-        view.file = logoImage
-        view.loadInBackground(nil)
-        return view
-    }
+//    func logoImageView() -> PFImageView {
+//        let view = PFImageView(image: UIImage(named: "placeholder"))
+//        view.file = logoImage
+//        view.loadInBackground(nil)
+//        return view
+//    }
     
     override class func initialize() {
         var onceToken : dispatch_once_t = 0;

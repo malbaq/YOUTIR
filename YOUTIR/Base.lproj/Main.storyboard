@@ -128,13 +128,13 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Magomet Albakov (logout) Pay a bill" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="e3h-3u-X5F">
-                                <rect key="frame" x="17" y="366" width="209" height="49"/>
+                                <rect key="frame" x="17" y="405" width="209" height="49"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="You have to logged in to pay" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bC7-a1-Rcl">
-                                <rect key="frame" x="234" y="366" width="233" height="30"/>
+                                <rect key="frame" x="234" y="405" width="233" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
@@ -148,8 +148,8 @@
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Moscow-Tver, W: 30, HxWxL: 20X30X40, Insurance: 3000" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gGc-bk-fi2">
-                                <rect key="frame" x="17" y="323" width="450" height="31"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Moscow-Tver, W: 30, HxWxL: 20X30X40, Insurance: 3000" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gGc-bk-fi2">
+                                <rect key="frame" x="17" y="323" width="450" height="74"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
@@ -162,6 +162,7 @@
                         <outlet property="carrierTelLabel" destination="JQ1-iP-tln" id="dCQ-E5-T9K"/>
                         <outlet property="carrierWebLabel" destination="9vE-0H-9Ub" id="rwG-HR-5Qf"/>
                         <outlet property="logoImage" destination="R57-LP-0iA" id="q21-ih-eB6"/>
+                        <outlet property="requestSpecsLabel" destination="gGc-bk-fi2" id="vb4-T5-DPY"/>
                         <outlet property="testRequestPointer" destination="e3h-3u-X5F" id="iLa-tQ-irG"/>
                         <outlet property="transitRateLabel" destination="rE0-5M-J4p" id="jEL-Pt-L9n"/>
                         <outlet property="transitTimeLabel" destination="Yn6-pN-nOa" id="ifk-je-j9M"/>
