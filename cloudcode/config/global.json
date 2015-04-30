@@ -1,0 +1,14 @@
+{
+    "applications": {
+        "YOUTIR": {
+            "applicationId": "jXj18SG3ynYCfXcSDHuYb5KjQCkDNOW6ijFJnhZ8", 
+            "masterKey": "VsbbJdqg1eK6S5HJzestF8oCZrWbRERvMlPpai6l"
+        }, 
+        "_default": {
+            "link": "YOUTIR"
+        }
+    }, 
+    "global": {
+        "parseVersion": "1.4.2"
+    }
+}
