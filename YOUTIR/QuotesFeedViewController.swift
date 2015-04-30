@@ -49,7 +49,7 @@ class QuotesFeedViewController: UIViewController, UITableViewDataSource, UITable
 //            }
 //        }
         
-        quoteCell.setQuoteCell(quote.carrier.name, transitRate: quote.transitRate, transitTime: quote.transitTime, logoImage: )
+        quoteCell.setQuoteCell(quote.carrier.name, transitRate: quote.transitRate, transitTime: quote.transitTime, logoImageView: quote.carrier.logoImageView())
         
         if indexPath.row % 2 == 0 {
             quoteCell.backgroundColor = UIColor.blueColor()

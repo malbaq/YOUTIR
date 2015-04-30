@@ -2,8 +2,8 @@
 # platform :ios, '6.0'
 
 target 'YOUTIR' do
-	pod ‘Parse’
-	pod ‘ParseUI’
+pod 'Parse'
+pod 'ParseUI'
 end
 
 target 'YOUTIRTests' do

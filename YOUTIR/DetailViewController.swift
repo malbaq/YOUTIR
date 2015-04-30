@@ -13,7 +13,7 @@ class DetailViewController: UIViewController {
     @IBOutlet var carrierNameLabel: UILabel!
     @IBOutlet var transitRateLabel: UILabel!
     @IBOutlet var transitTimeLabel: UILabel!
-    @IBOutlet var logoImage: UIImageView!
+    @IBOutlet var logoImage: PFImageView!
     @IBOutlet var carrierTelLabel: UILabel!
     @IBOutlet var carrierWebLabel: UILabel!
 

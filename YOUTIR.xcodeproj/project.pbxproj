@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D996B9FC54D4D0192FE6494C /* libPods-YOUTIR.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B990248AF1ACC8ECBAD8DEB9 /* libPods-YOUTIR.a */; };
 		E234771B1AEFB88E00ADE6C4 /* CarrierModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E234771A1AEFB88E00ADE6C4 /* CarrierModel.swift */; };
 		E234771F1AF12DFC00ADE6C4 /* Comments.swift in Sources */ = {isa = PBXBuildFile; fileRef = E234771E1AF12DFC00ADE6C4 /* Comments.swift */; };
 		E23D2E091AD3E8CF00C873FD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E23D2E081AD3E8CF00C873FD /* AppDelegate.swift */; };
@@ -35,6 +36,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		82D2AAB7B27B62E3E8999983 /* Pods-YOUTIR.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YOUTIR.debug.xcconfig"; path = "Pods/Target Support Files/Pods-YOUTIR/Pods-YOUTIR.debug.xcconfig"; sourceTree = "<group>"; };
+		B1A9AAD46699B2AC02EBFC88 /* Pods-YOUTIR.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YOUTIR.release.xcconfig"; path = "Pods/Target Support Files/Pods-YOUTIR/Pods-YOUTIR.release.xcconfig"; sourceTree = "<group>"; };
+		B990248AF1ACC8ECBAD8DEB9 /* libPods-YOUTIR.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-YOUTIR.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E234771A1AEFB88E00ADE6C4 /* CarrierModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CarrierModel.swift; sourceTree = "<group>"; };
 		E234771E1AF12DFC00ADE6C4 /* Comments.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Comments.swift; sourceTree = "<group>"; };
 		E23D2E031AD3E8CF00C873FD /* YOUTIR.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = YOUTIR.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -62,6 +66,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D996B9FC54D4D0192FE6494C /* libPods-YOUTIR.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -75,12 +80,31 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		6284F61F5EA6DF5651D304A0 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				B990248AF1ACC8ECBAD8DEB9 /* libPods-YOUTIR.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		956DD7A46C8C9EBC59BD7145 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				82D2AAB7B27B62E3E8999983 /* Pods-YOUTIR.debug.xcconfig */,
+				B1A9AAD46699B2AC02EBFC88 /* Pods-YOUTIR.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		E23D2DFA1AD3E8CF00C873FD = {
 			isa = PBXGroup;
 			children = (
 				E23D2E051AD3E8CF00C873FD /* YOUTIR */,
 				E23D2E1B1AD3E8CF00C873FD /* YOUTIRTests */,
 				E23D2E041AD3E8CF00C873FD /* Products */,
+				956DD7A46C8C9EBC59BD7145 /* Pods */,
+				6284F61F5EA6DF5651D304A0 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -148,9 +172,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = E23D2E221AD3E8CF00C873FD /* Build configuration list for PBXNativeTarget "YOUTIR" */;
 			buildPhases = (
+				7636EB7EC2C3CCF7416F4AF2 /* Check Pods Manifest.lock */,
 				E23D2DFF1AD3E8CF00C873FD /* Sources */,
 				E23D2E001AD3E8CF00C873FD /* Frameworks */,
 				E23D2E011AD3E8CF00C873FD /* Resources */,
+				40BD897CC14662298FBD572A /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -237,6 +263,39 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		40BD897CC14662298FBD572A /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-YOUTIR/Pods-YOUTIR-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		7636EB7EC2C3CCF7416F4AF2 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		E23D2DFF1AD3E8CF00C873FD /* Sources */ = {
@@ -372,6 +431,7 @@
 		};
 		E23D2E231AD3E8CF00C873FD /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 82D2AAB7B27B62E3E8999983 /* Pods-YOUTIR.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
@@ -390,6 +450,7 @@
 		};
 		E23D2E241AD3E8CF00C873FD /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B1A9AAD46699B2AC02EBFC88 /* Pods-YOUTIR.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;

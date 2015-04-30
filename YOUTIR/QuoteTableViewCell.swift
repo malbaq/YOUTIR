@@ -11,7 +11,7 @@ class QuoteTableViewCell: UITableViewCell {
     @IBOutlet var carrierName: UILabel!
     @IBOutlet var transitRate: UILabel!
     @IBOutlet var transitTime: UILabel!
-    @IBOutlet var logoImage: UIImageView!
+    @IBOutlet var logoImage: PFImageView!
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -24,10 +24,14 @@ class QuoteTableViewCell: UITableViewCell {
         // Configure the view for the selected state
     }
     
-    func setQuoteCell(carrierName: String, transitRate: Int, transitTime: Int, logoImage: NSData){
+//    func setQuote(quote: Quote){
+//        
+//    }
+    
+    func setQuoteCell(carrierName: String, transitRate: Int, transitTime: Int, logoImageView: PFImageView){
         self.carrierName.text = carrierName
         self.transitRate.text = String(transitRate)
         self.transitTime.text = String(transitTime)
-        self.logoImage.image = UIImage(data: logoImage)
+        self.logoImage = logoImageView
     }
 }
