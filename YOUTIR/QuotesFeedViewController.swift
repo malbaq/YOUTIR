@@ -57,6 +57,7 @@ class QuotesFeedViewController: UIViewController, UITableViewDataSource, UITable
         detailViewController.quote = quote
         self.navigationController?.pushViewController(detailViewController, animated: true)
 //        self.presentViewController(detailViewController, animated: true, completion: nil)
+        self.tableView.deselectRowAtIndexPath(indexPath, animated: true)
     }
 
     func setUpQuotes() {

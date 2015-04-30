@@ -8,8 +8,6 @@ import Foundation
 
 /*
 
-push DetailVC to NavVC
-
 Verstka Detail view
 
 if pf user = current user -> pay
