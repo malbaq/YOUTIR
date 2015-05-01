@@ -36,8 +36,17 @@ class DetailViewController: UIViewController {
         self.carrierWebLabel.text = quote.carrier["web"] as! String
         self.logoImage.image = UIImage(named: "placeholder")
         
-//        self.requestSpecsLabel.text = quote.request["fromCity"] as! String
+        // The request specs data to fill out the label
+        quote.request.fetchIfNeeded()
+        var fromCity = quote.request.fromCity
+        var toCity = quote.request.toCity
+        var weight = quote.request.weight
+        var length = quote.request.length
+        var width = quote.request.width
+        var height = quote.request.height
+        var insurance = quote.request.insurance
         
+        self.requestSpecsLabel.text = "From: \(fromCity), To: \(toCity), LxWxH: \(length)x\(width)x\(height), Insurance: \(insurance)"
         
         let logoImageFile = quote.carrier["logoImage"] as! PFFile
         logoImageFile.getDataInBackgroundWithBlock {
