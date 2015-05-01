@@ -36,6 +36,9 @@ class DetailViewController: UIViewController {
         self.carrierWebLabel.text = quote.carrier["web"] as! String
         self.logoImage.image = UIImage(named: "placeholder")
         
+//        self.requestSpecsLabel.text = quote.request["fromCity"] as! String
+        
+        
         let logoImageFile = quote.carrier["logoImage"] as! PFFile
         logoImageFile.getDataInBackgroundWithBlock {
             (imageData: NSData?, error: NSError?) -> Void in
