@@ -14,4 +14,8 @@ if pf user = current user -> pay
 
 else -> sign up
 
+paypal
+
+
+
 */

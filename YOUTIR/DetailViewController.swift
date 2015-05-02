@@ -8,7 +8,7 @@
 
 import UIKit
 
-class DetailViewController: UIViewController {
+class DetailViewController: UIViewController, PFLogInViewControllerDelegate {
     
     @IBOutlet var carrierNameLabel: UILabel!
     @IBOutlet var transitRateLabel: UILabel!
@@ -46,6 +46,8 @@ class DetailViewController: UIViewController {
         var height = quote.request.height
         var insurance = quote.request.insurance
         
+        self.login()
+        
         self.requestSpecsLabel.text = "From: \(fromCity), To: \(toCity), LxWxH: \(length)x\(width)x\(height), Insurance: \(insurance)"
         
         let logoImageFile = quote.carrier["logoImage"] as! PFFile
@@ -58,7 +60,7 @@ class DetailViewController: UIViewController {
             }
         }
         
-       
+        
         // To check if PFUser != nil then show pay else show login using alpha method 0 or 1, or text and func of the same button + alpha for name of the user name and logout button alpha.
 
     }
@@ -68,6 +70,22 @@ class DetailViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
+    func login() {
+        var logInController = PFLogInViewController()
+        logInController.delegate = self
+        
+        logInController.facebookPermissions = ["email", "public_profile"]
+        
+        logInController.fields = (PFLogInFields.UsernameAndPassword
+            | PFLogInFields.LogInButton
+            | PFLogInFields.SignUpButton
+            | PFLogInFields.PasswordForgotten
+            | PFLogInFields.DismissButton
+            | PFLogInFields.Facebook
+            | PFLogInFields.Twitter)
+        
+        self.presentViewController(logInController, animated:true, completion: nil)
+    }
 
     /*
     // MARK: - Navigation
