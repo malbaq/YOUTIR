@@ -19,7 +19,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         Parse.setApplicationId("jXj18SG3ynYCfXcSDHuYb5KjQCkDNOW6ijFJnhZ8", clientKey:"P5wAFGoI9d04XG7WHVOempirgkJJqor2i9EWh7j8")
         
-        PFFacebookUtils.initializeFacebookWithLaunchOptions(launchOptions)
+        PFFacebookUtils.initializeFacebookWithApplicationLaunchOptions(launchOptions)
         
         // PFFacebookUtils.initializeFacebook()
         
@@ -53,10 +53,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         openURL url: NSURL,
         sourceApplication: String?,
         annotation: AnyObject?) -> Bool {
-            return FBSDKApplicationDelegate.sharedInstance.application(application,
-                openURL: url,
-                sourceApplication: sourceApplication,
-                annotation: annotation)
+            
+             return FBSDKApplicationDelegate.sharedInstance().application(application, openURL: url, sourceApplication: sourceApplication, annotation: annotation)
     }
     
     func applicationDidBecomeActive(application: UIApplication) {
