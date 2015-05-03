@@ -71,7 +71,10 @@ class DetailViewController: UIViewController, PFLogInViewControllerDelegate {
     }
     
     func callForLogin() {
-        var logInController = PFLogInViewController()
+        
+        let logInController = LoginViewController()
+        logInController.signUpController = SignUpViewController()
+        
         logInController.delegate = self
         
         logInController.facebookPermissions = ["email", "public_profile"]
@@ -81,8 +84,7 @@ class DetailViewController: UIViewController, PFLogInViewControllerDelegate {
             | PFLogInFields.SignUpButton
             | PFLogInFields.PasswordForgotten
             | PFLogInFields.DismissButton
-            | PFLogInFields.Facebook
-            | PFLogInFields.Twitter)
+            | PFLogInFields.Facebook)
         
         self.presentViewController(logInController, animated:true, completion: nil)
     }
