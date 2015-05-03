@@ -127,18 +127,6 @@
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Magomet Albakov (logout) Pay a bill" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="e3h-3u-X5F">
-                                <rect key="frame" x="17" y="405" width="209" height="49"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="You have to logged in to pay" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bC7-a1-Rcl">
-                                <rect key="frame" x="234" y="405" width="233" height="30"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="R57-LP-0iA" customClass="PFImageView">
                                 <rect key="frame" x="16" y="143" width="90" height="90"/>
                             </imageView>
@@ -154,6 +142,24 @@
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QjT-vt-4t1">
+                                <rect key="frame" x="17" y="405" width="122" height="30"/>
+                                <state key="normal" title="Login to Pay">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="logInButtonPressed:" destination="H7t-Qv-gDG" eventType="touchUpInside" id="CLs-a0-RzI"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XCm-Sr-JKT">
+                                <rect key="frame" x="147" y="405" width="122" height="30"/>
+                                <state key="normal" title="Place Order">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="placeOrderButtonPressed:" destination="H7t-Qv-gDG" eventType="touchUpInside" id="UvD-q2-dAB"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
@@ -163,7 +169,6 @@
                         <outlet property="carrierWebLabel" destination="9vE-0H-9Ub" id="rwG-HR-5Qf"/>
                         <outlet property="logoImage" destination="R57-LP-0iA" id="q21-ih-eB6"/>
                         <outlet property="requestSpecsLabel" destination="gGc-bk-fi2" id="vb4-T5-DPY"/>
-                        <outlet property="testRequestPointer" destination="e3h-3u-X5F" id="iLa-tQ-irG"/>
                         <outlet property="transitRateLabel" destination="rE0-5M-J4p" id="jEL-Pt-L9n"/>
                         <outlet property="transitTimeLabel" destination="Yn6-pN-nOa" id="ifk-je-j9M"/>
                     </connections>

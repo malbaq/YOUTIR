@@ -17,9 +17,6 @@ class DetailViewController: UIViewController, PFLogInViewControllerDelegate {
     @IBOutlet var carrierTelLabel: UILabel!
     @IBOutlet var carrierWebLabel: UILabel!
     @IBOutlet var requestSpecsLabel: UILabel!
-
-    //test the pointer, should be deleted later
-    @IBOutlet var testRequestPointer: UILabel!
     
     var quote: Quote!
     
@@ -46,8 +43,6 @@ class DetailViewController: UIViewController, PFLogInViewControllerDelegate {
         var height = quote.request.height
         var insurance = quote.request.insurance
         
-        self.callForLogin()
-        
         self.requestSpecsLabel.text = "From: \(fromCity), To: \(toCity), LxWxH: \(length)x\(width)x\(height), Insurance: \(insurance)"
         
         let logoImageFile = quote.carrier["logoImage"] as! PFFile
@@ -61,7 +56,7 @@ class DetailViewController: UIViewController, PFLogInViewControllerDelegate {
         }
         
         
-        // To check if PFUser != nil then show pay else show login using alpha method 0 or 1, or text and func of the same button + alpha for name of the user name and logout button alpha.
+        // Check if PFUser != nil then show pay else show login using alpha method 0 or 1, or text and func of the same button + alpha for name of the user name and logout button alpha.
 
     }
 
@@ -98,7 +93,23 @@ class DetailViewController: UIViewController, PFLogInViewControllerDelegate {
     func logInViewControllerDidCancelLogIn(controller: PFLogInViewController) -> Void {
         self.dismissViewControllerAnimated(true, completion: nil)
     }
+    
+//    PFFacebookUtils.logInWithPermissions(permissions, block: {
+//        (user: PFUser!, error: NSError!) -> Void in
+//            if user == nil {
+//                self.signInCancelledLabel.alpha = 1
+//                NSLog("Uh oh. The user cancelled the Facebook login.")
+//            } else if user.isNew {
+//                self.performSegueWithIdentifier("login", sender: self)
+//                NSLog("User signed up and logged in through Facebook!")
+//            } else {
+//                self.performSegueWithIdentifier("login", sender: self)
+//                NSLog("User logged in through Facebook!")
+//            }
+//        })
 
+    
+    
     /*
     // MARK: - Navigation
 
@@ -108,5 +119,13 @@ class DetailViewController: UIViewController, PFLogInViewControllerDelegate {
         // Pass the selected object to the new view controller.
     }
     */
+    
+    @IBAction func logInButtonPressed(sender: AnyObject) {
+        self.callForLogin()
+    }
+    
+    @IBAction func placeOrderButtonPressed(sender: AnyObject) {
+        // vyzov paypal
+    }
 
 }
