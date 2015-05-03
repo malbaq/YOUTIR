@@ -46,7 +46,7 @@ class DetailViewController: UIViewController, PFLogInViewControllerDelegate {
         var height = quote.request.height
         var insurance = quote.request.insurance
         
-        self.login()
+        self.callForLogin()
         
         self.requestSpecsLabel.text = "From: \(fromCity), To: \(toCity), LxWxH: \(length)x\(width)x\(height), Insurance: \(insurance)"
         
@@ -70,7 +70,7 @@ class DetailViewController: UIViewController, PFLogInViewControllerDelegate {
         // Dispose of any resources that can be recreated.
     }
     
-    func login() {
+    func callForLogin() {
         var logInController = PFLogInViewController()
         logInController.delegate = self
         
@@ -85,6 +85,16 @@ class DetailViewController: UIViewController, PFLogInViewControllerDelegate {
             | PFLogInFields.Twitter)
         
         self.presentViewController(logInController, animated:true, completion: nil)
+    }
+
+    //Функции вызываются после попытки логина с случае успеха и неудачи соотвественно
+    
+    func logInViewController(logInController: PFLogInViewController, didLogInUser user: PFUser) {
+        self.dismissViewControllerAnimated(true, completion: nil)
+    }
+    
+    func logInViewControllerDidCancelLogIn(controller: PFLogInViewController) -> Void {
+        self.dismissViewControllerAnimated(true, completion: nil)
     }
 
     /*
