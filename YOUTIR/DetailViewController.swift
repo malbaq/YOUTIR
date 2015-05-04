@@ -18,6 +18,8 @@ class DetailViewController: UIViewController, PFLogInViewControllerDelegate {
     @IBOutlet var carrierWebLabel: UILabel!
     @IBOutlet var requestSpecsLabel: UILabel!
     
+    var user : PFUser?
+    
     var quote: Quote!
     
     override func viewDidLoad() {
@@ -33,7 +35,6 @@ class DetailViewController: UIViewController, PFLogInViewControllerDelegate {
         self.carrierWebLabel.text = quote.carrier["web"] as! String
         self.logoImage.image = UIImage(named: "placeholder")
         
-        // The request specs data to fill out the label
         quote.request.fetchIfNeeded()
         var fromCity = quote.request.fromCity
         var toCity = quote.request.toCity
@@ -54,10 +55,6 @@ class DetailViewController: UIViewController, PFLogInViewControllerDelegate {
                 }
             }
         }
-        
-        
-        // Check if PFUser != nil then show pay else show login using alpha method 0 or 1, or text and func of the same button + alpha for name of the user name and logout button alpha.
-
     }
 
     override func didReceiveMemoryWarning() {
@@ -83,32 +80,15 @@ class DetailViewController: UIViewController, PFLogInViewControllerDelegate {
         
         self.presentViewController(logInController, animated:true, completion: nil)
     }
-
-    //Функции вызываются после попытки логина с случае успеха и неудачи соотвественно
     
     func logInViewController(logInController: PFLogInViewController, didLogInUser user: PFUser) {
+        self.user = user
         self.dismissViewControllerAnimated(true, completion: nil)
     }
     
     func logInViewControllerDidCancelLogIn(controller: PFLogInViewController) -> Void {
         self.dismissViewControllerAnimated(true, completion: nil)
     }
-    
-//    PFFacebookUtils.logInWithPermissions(permissions, block: {
-//        (user: PFUser!, error: NSError!) -> Void in
-//            if user == nil {
-//                self.signInCancelledLabel.alpha = 1
-//                NSLog("Uh oh. The user cancelled the Facebook login.")
-//            } else if user.isNew {
-//                self.performSegueWithIdentifier("login", sender: self)
-//                NSLog("User signed up and logged in through Facebook!")
-//            } else {
-//                self.performSegueWithIdentifier("login", sender: self)
-//                NSLog("User logged in through Facebook!")
-//            }
-//        })
-
-    
     
     /*
     // MARK: - Navigation
@@ -119,13 +99,27 @@ class DetailViewController: UIViewController, PFLogInViewControllerDelegate {
         // Pass the selected object to the new view controller.
     }
     */
-    
-    @IBAction func logInButtonPressed(sender: AnyObject) {
-        self.callForLogin()
-    }
-    
+        
     @IBAction func placeOrderButtonPressed(sender: AnyObject) {
-        // vyzov paypal
+        if self.user == nil {
+            let alert = UIAlertController(title: "Need to be authorized", message: "To place an order you have to authorize first", preferredStyle: UIAlertControllerStyle.Alert)
+            let okAction = UIAlertAction(title: "OK", style: .Default, handler: { (action) -> Void in
+                alert.dismissViewControllerAnimated(true, completion: nil)
+                self.callForLogin()
+            })
+            let cancelAction = UIAlertAction(title: "Cancel", style: .Cancel, handler: { (action) -> Void in
+                alert.dismissViewControllerAnimated(true, completion: nil)
+            })
+            
+            alert.addAction(okAction)
+            alert.addAction(cancelAction)
+            
+            self.presentViewController(alert, animated: true, completion: nil)
+            
+        } else {
+            // self.paypalVCCalling()
+        }
+    
     }
 
 }

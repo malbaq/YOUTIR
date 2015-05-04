@@ -8,14 +8,14 @@ import Foundation
 
 /*
 
-Verstka Detail view
+One button for pay intergrated login in
 
-if pf user = current user -> pay
+Instead custom design table view
 
-else -> sign up
+Cloud Code
 
 paypal
 
-
+imadeView.contentMode to turn the logo at loginVC
 
 */
