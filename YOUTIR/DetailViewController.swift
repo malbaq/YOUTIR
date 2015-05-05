@@ -116,7 +116,5 @@ class DetailViewController: UIViewController, PFLogInViewControllerDelegate {
         } else {
             // self.paypalVCCalling()
         }
-    
     }
-
 }

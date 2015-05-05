@@ -19,6 +19,7 @@ class SignUpViewController: PFSignUpViewController {
         
         let logoView = UIImageView(image: UIImage(named:"logo.png"))
         self.signUpView!.logo = logoView
+        logoView.contentMode = UIViewContentMode.ScaleAspectFit
 
     }
 

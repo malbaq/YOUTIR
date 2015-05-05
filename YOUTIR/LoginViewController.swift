@@ -19,6 +19,7 @@ class LoginViewController: PFLogInViewController {
         
         let logoView = UIImageView(image: UIImage(named:"logo.png"))
         self.logInView!.logo = logoView
+        logoView.contentMode = UIViewContentMode.ScaleAspectFit
     }
 
     override func didReceiveMemoryWarning() {
