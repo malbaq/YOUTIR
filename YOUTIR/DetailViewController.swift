@@ -18,8 +18,6 @@ class DetailViewController: UIViewController, PFLogInViewControllerDelegate {
     @IBOutlet var carrierWebLabel: UILabel!
     @IBOutlet var requestSpecsLabel: UILabel!
     
-    var user : PFUser?
-    
     var quote: Quote!
     
     override func viewDidLoad() {
@@ -82,7 +80,6 @@ class DetailViewController: UIViewController, PFLogInViewControllerDelegate {
     }
     
     func logInViewController(logInController: PFLogInViewController, didLogInUser user: PFUser) {
-        self.user = user
         self.dismissViewControllerAnimated(true, completion: nil)
     }
     
@@ -101,7 +98,7 @@ class DetailViewController: UIViewController, PFLogInViewControllerDelegate {
     */
         
     @IBAction func placeOrderButtonPressed(sender: AnyObject) {
-        if self.user == nil {
+        if PFUser.currentUser() == nil {
             let alert = UIAlertController(title: "Need to be authorized", message: "To place an order you have to authorize first", preferredStyle: UIAlertControllerStyle.Alert)
             let okAction = UIAlertAction(title: "OK", style: .Default, handler: { (action) -> Void in
                 alert.dismissViewControllerAnimated(true, completion: nil)
