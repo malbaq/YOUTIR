@@ -114,6 +114,7 @@ class DetailViewController: UIViewController, PFLogInViewControllerDelegate {
             self.presentViewController(alert, animated: true, completion: nil)
             
         } else {
+            self.callForLogin()
             // self.paypalVCCalling()
         }
     }

@@ -41,11 +41,11 @@ class QuotesFeedViewController: UIViewController, UITableViewDataSource, UITable
         
         quoteCell.setQuote(quote)
         
-        if indexPath.row % 2 == 0 {
-            quoteCell.backgroundColor = UIColor.blueColor()
-        } else {
-            quoteCell.backgroundColor = UIColor.redColor()
-        }
+//        if indexPath.row % 2 == 0 {
+//            quoteCell.backgroundColor = UIColor.blueColor()
+//        } else {
+//            quoteCell.backgroundColor = UIColor.redColor()
+//        }
         
         return quoteCell
     }

@@ -30,6 +30,9 @@ class QuoteTableViewCell: UITableViewCell {
         self.transitRate.text = String(quote.transitRate)
         self.transitTime.text = String(quote.transitTime)
         self.logoImage.image = UIImage(named: "placeholder")
+        self.logoImage.layer.cornerRadius = CGRectGetWidth(self.logoImage.frame)/15.0
+        self.logoImage.layer.masksToBounds = true
+        
         
         let logoImageFile = quote.carrier["logoImage"] as! PFFile
         logoImageFile.getDataInBackgroundWithBlock {

@@ -8,6 +8,6 @@ paypal - ментор
 
 проверка warnings if let
 
-round image corners
+поправить отступ картинки слева на detailVC
 
 */
