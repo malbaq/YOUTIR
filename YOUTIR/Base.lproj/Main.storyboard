@@ -276,10 +276,10 @@
             </objects>
             <point key="canvasLocation" x="1960" y="485"/>
         </scene>
-        <!--Table View Controller-->
+        <!--Detail Table View Controller-->
         <scene sceneID="Typ-Li-vEk">
             <objects>
-                <tableViewController id="ycm-hz-1lr" sceneMemberID="viewController">
+                <tableViewController storyboardIdentifier="DetailTableViewController" id="ycm-hz-1lr" customClass="DetailTableViewController" customModule="YOUTIR" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="grouped" separatorStyle="default" rowHeight="44" sectionHeaderHeight="10" sectionFooterHeight="10" id="mKg-08-Cws">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -699,12 +699,56 @@
                                     </tableViewCell>
                                 </cells>
                             </tableViewSection>
+                            <tableViewSection id="NcL-UF-ytg">
+                                <cells>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="NiK-wG-OZm">
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="NiK-wG-OZm" id="VwR-iW-ZB0">
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Fbx-a0-GpL">
+                                                    <rect key="frame" x="0.0" y="0.0" width="600" height="43"/>
+                                                    <state key="normal" title="Place an Order">
+                                                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                                    </state>
+                                                    <connections>
+                                                        <action selector="placeOrderButtonPressed:" destination="ycm-hz-1lr" eventType="touchUpInside" id="CU2-f7-DZf"/>
+                                                    </connections>
+                                                </button>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="Fbx-a0-GpL" firstAttribute="top" secondItem="VwR-iW-ZB0" secondAttribute="top" id="GB2-bn-ztj"/>
+                                                <constraint firstAttribute="trailing" secondItem="Fbx-a0-GpL" secondAttribute="trailing" id="SmB-bb-1KW"/>
+                                                <constraint firstAttribute="bottom" secondItem="Fbx-a0-GpL" secondAttribute="bottom" id="gtc-oh-dLv"/>
+                                                <constraint firstAttribute="centerX" secondItem="Fbx-a0-GpL" secondAttribute="centerX" id="kuk-bs-SoU"/>
+                                                <constraint firstItem="Fbx-a0-GpL" firstAttribute="leading" secondItem="VwR-iW-ZB0" secondAttribute="leading" id="soh-Jw-5HX"/>
+                                                <constraint firstAttribute="centerY" secondItem="Fbx-a0-GpL" secondAttribute="centerY" id="tIW-NZ-ofx"/>
+                                            </constraints>
+                                            <variation key="default">
+                                                <mask key="constraints">
+                                                    <exclude reference="kuk-bs-SoU"/>
+                                                    <exclude reference="tIW-NZ-ofx"/>
+                                                </mask>
+                                            </variation>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </cells>
+                            </tableViewSection>
                         </sections>
                         <connections>
                             <outlet property="dataSource" destination="ycm-hz-1lr" id="jW6-02-KvS"/>
                             <outlet property="delegate" destination="ycm-hz-1lr" id="zqs-Lp-4eB"/>
                         </connections>
                     </tableView>
+                    <connections>
+                        <outlet property="carrierNameLabel" destination="MkL-cj-DQA" id="LcX-Yw-SMF"/>
+                        <outlet property="carrierTelLabel" destination="JNm-14-GNw" id="BiV-eW-QJt"/>
+                        <outlet property="carrierWebLabel" destination="rmt-k7-6oZ" id="pFS-S1-Cb0"/>
+                        <outlet property="logoImage" destination="sR9-Yl-b3O" id="EwN-rK-z8L"/>
+                        <outlet property="requestSpecsLabel" destination="bUU-E1-w1d" id="4RX-Cp-LPw"/>
+                        <outlet property="transitRateLabel" destination="l6u-gN-BzK" id="7C8-A2-UeD"/>
+                        <outlet property="transitTimeLabel" destination="3DL-HX-baR" id="TXL-9F-eba"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iV8-sP-dSv" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

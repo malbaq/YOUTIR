@@ -26,6 +26,7 @@
 		E2D1C5771AE512FE00DBB3A8 /* RequestModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2D1C5761AE512FE00DBB3A8 /* RequestModel.swift */; };
 		E2DD42DE1AF6413700A4F51D /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2DD42DD1AF6413700A4F51D /* LoginViewController.swift */; };
 		E2DD42E01AF6474800A4F51D /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2DD42DF1AF6474800A4F51D /* SignUpViewController.swift */; };
+		E2EDCB2B1AFE0B6D0015D241 /* DetailTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2EDCB2A1AFE0B6D0015D241 /* DetailTableViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -65,6 +66,7 @@
 		E2D1C5761AE512FE00DBB3A8 /* RequestModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RequestModel.swift; sourceTree = "<group>"; };
 		E2DD42DD1AF6413700A4F51D /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		E2DD42DF1AF6474800A4F51D /* SignUpViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
+		E2EDCB2A1AFE0B6D0015D241 /* DetailTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailTableViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -131,6 +133,7 @@
 				E24B7C591AD972670026E63B /* RequestFormViewController.swift */,
 				E24B7C5B1AD9AAB20026E63B /* QuotesFeedViewController.swift */,
 				E24B7C5D1ADA9EE90026E63B /* QuoteTableViewCell.swift */,
+				E2EDCB2A1AFE0B6D0015D241 /* DetailTableViewController.swift */,
 				E24B7C651ADBE2810026E63B /* DetailViewController.swift */,
 				E2DD42DD1AF6413700A4F51D /* LoginViewController.swift */,
 				E2DD42DF1AF6474800A4F51D /* SignUpViewController.swift */,
@@ -320,6 +323,7 @@
 				E2D1C5771AE512FE00DBB3A8 /* RequestModel.swift in Sources */,
 				E24B7C5A1AD972670026E63B /* RequestFormViewController.swift in Sources */,
 				E234771B1AEFB88E00ADE6C4 /* CarrierModel.swift in Sources */,
+				E2EDCB2B1AFE0B6D0015D241 /* DetailTableViewController.swift in Sources */,
 				E2DD42DE1AF6413700A4F51D /* LoginViewController.swift in Sources */,
 				E24B7C5C1AD9AAB20026E63B /* QuotesFeedViewController.swift in Sources */,
 				E2B995771AFCA6A20031255F /* RequestFormTableViewController.swift in Sources */,

@@ -52,10 +52,10 @@ class QuotesFeedViewController: UIViewController, UITableViewDataSource, UITable
     
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         let quote = arrayOfQuotes[indexPath.row]
-        var detailViewController: DetailViewController = self.storyboard?.instantiateViewControllerWithIdentifier("DetailViewController")as! DetailViewController
+        var detailTableViewController: DetailTableViewController = self.storyboard?.instantiateViewControllerWithIdentifier("DetailTableViewController")as! DetailTableViewController
 
-        detailViewController.quote = quote
-        self.navigationController?.pushViewController(detailViewController, animated: true)
+        detailTableViewController.quote = quote
+        self.navigationController?.pushViewController(detailTableViewController, animated: true)
 //        self.presentViewController(detailViewController, animated: true, completion: nil)
         self.tableView.deselectRowAtIndexPath(indexPath, animated: true)
     }
