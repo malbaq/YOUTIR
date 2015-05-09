@@ -8,6 +8,6 @@ paypal - ментор
 
 проверка warnings if let
 
-поправить отступ картинки слева на detailVC
+Невыделять серым didSelectRow
 
 */

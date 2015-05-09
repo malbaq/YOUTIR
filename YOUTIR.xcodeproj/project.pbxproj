@@ -22,6 +22,7 @@
 		E24B7C631ADB17A30026E63B /* carrierName1.png in Resources */ = {isa = PBXBuildFile; fileRef = E24B7C611ADB17A30026E63B /* carrierName1.png */; };
 		E24B7C641ADB17A30026E63B /* carrierName2.png in Resources */ = {isa = PBXBuildFile; fileRef = E24B7C621ADB17A30026E63B /* carrierName2.png */; };
 		E24B7C661ADBE2810026E63B /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E24B7C651ADBE2810026E63B /* DetailViewController.swift */; };
+		E2B995771AFCA6A20031255F /* RequestFormTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2B995761AFCA6A20031255F /* RequestFormTableViewController.swift */; };
 		E2D1C5771AE512FE00DBB3A8 /* RequestModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2D1C5761AE512FE00DBB3A8 /* RequestModel.swift */; };
 		E2DD42DE1AF6413700A4F51D /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2DD42DD1AF6413700A4F51D /* LoginViewController.swift */; };
 		E2DD42E01AF6474800A4F51D /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2DD42DF1AF6474800A4F51D /* SignUpViewController.swift */; };
@@ -60,6 +61,7 @@
 		E24B7C611ADB17A30026E63B /* carrierName1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = carrierName1.png; sourceTree = "<group>"; };
 		E24B7C621ADB17A30026E63B /* carrierName2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = carrierName2.png; sourceTree = "<group>"; };
 		E24B7C651ADBE2810026E63B /* DetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		E2B995761AFCA6A20031255F /* RequestFormTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RequestFormTableViewController.swift; sourceTree = "<group>"; };
 		E2D1C5761AE512FE00DBB3A8 /* RequestModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RequestModel.swift; sourceTree = "<group>"; };
 		E2DD42DD1AF6413700A4F51D /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		E2DD42DF1AF6474800A4F51D /* SignUpViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
@@ -125,6 +127,7 @@
 			isa = PBXGroup;
 			children = (
 				E23D2E081AD3E8CF00C873FD /* AppDelegate.swift */,
+				E2B995761AFCA6A20031255F /* RequestFormTableViewController.swift */,
 				E24B7C591AD972670026E63B /* RequestFormViewController.swift */,
 				E24B7C5B1AD9AAB20026E63B /* QuotesFeedViewController.swift */,
 				E24B7C5D1ADA9EE90026E63B /* QuoteTableViewCell.swift */,
@@ -319,6 +322,7 @@
 				E234771B1AEFB88E00ADE6C4 /* CarrierModel.swift in Sources */,
 				E2DD42DE1AF6413700A4F51D /* LoginViewController.swift in Sources */,
 				E24B7C5C1AD9AAB20026E63B /* QuotesFeedViewController.swift in Sources */,
+				E2B995771AFCA6A20031255F /* RequestFormTableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
