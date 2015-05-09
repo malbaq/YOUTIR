@@ -1,6 +1,6 @@
 /*
 
-Instead custom design table view
++ Instead custom design table view
 
 Cloud Code - делает ментор
 

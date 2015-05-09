@@ -16,7 +16,13 @@ class DetailTableViewController: UITableViewController, PFLogInViewControllerDel
     @IBOutlet var logoImage: PFImageView!
     @IBOutlet var carrierTelLabel: UILabel!
     @IBOutlet var carrierWebLabel: UILabel!
-    @IBOutlet var requestSpecsLabel: UILabel!
+    @IBOutlet var fromCityLabel: UILabel!
+    @IBOutlet var toCityLabel: UILabel!
+    @IBOutlet var weightLabel: UILabel!
+    @IBOutlet var lengthLabel: UILabel!
+    @IBOutlet var widthLabel: UILabel!
+    @IBOutlet var heightLabel: UILabel!
+    @IBOutlet var insuranceLabel: UILabel!
     
     var quote: Quote!
 
@@ -38,15 +44,14 @@ class DetailTableViewController: UITableViewController, PFLogInViewControllerDel
         self.logoImage.image = UIImage(named: "placeholder")
         
         quote.request.fetchIfNeeded()
-        var fromCity = quote.request.fromCity
-        var toCity = quote.request.toCity
-        var weight = quote.request.weight
-        var length = quote.request.length
-        var width = quote.request.width
-        var height = quote.request.height
-        var insurance = quote.request.insurance
-        
-        self.requestSpecsLabel.text = "From: \(fromCity), To: \(toCity), LxWxH: \(length)x\(width)x\(height), Insurance: \(insurance)"
+
+        self.fromCityLabel.text = quote.request.fromCity
+        self.toCityLabel.text = quote.request.toCity
+        self.weightLabel.text = String(quote.request.weight)
+        self.lengthLabel.text = String(quote.request.length)
+        self.widthLabel.text = String(quote.request.width)
+        self.heightLabel.text = String(quote.request.height)
+        self.insuranceLabel.text = String(quote.request.insurance)
         
         let logoImageFile = quote.carrier["logoImage"] as! PFFile
         logoImageFile.getDataInBackgroundWithBlock {

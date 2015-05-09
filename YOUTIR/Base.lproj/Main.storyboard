@@ -744,10 +744,16 @@
                         <outlet property="carrierNameLabel" destination="MkL-cj-DQA" id="LcX-Yw-SMF"/>
                         <outlet property="carrierTelLabel" destination="JNm-14-GNw" id="BiV-eW-QJt"/>
                         <outlet property="carrierWebLabel" destination="rmt-k7-6oZ" id="pFS-S1-Cb0"/>
+                        <outlet property="fromCityLabel" destination="bUU-E1-w1d" id="qOp-dL-MA4"/>
+                        <outlet property="heightLabel" destination="G5g-cs-0if" id="vX4-bZ-m1M"/>
+                        <outlet property="insuranceLabel" destination="yMl-ek-wWz" id="OIE-K3-vn8"/>
+                        <outlet property="lengthLabel" destination="OwR-SS-yeW" id="8Yx-eR-s5r"/>
                         <outlet property="logoImage" destination="sR9-Yl-b3O" id="EwN-rK-z8L"/>
-                        <outlet property="requestSpecsLabel" destination="bUU-E1-w1d" id="4RX-Cp-LPw"/>
+                        <outlet property="toCityLabel" destination="nug-FR-vNJ" id="evB-C8-jiB"/>
                         <outlet property="transitRateLabel" destination="l6u-gN-BzK" id="7C8-A2-UeD"/>
                         <outlet property="transitTimeLabel" destination="3DL-HX-baR" id="TXL-9F-eba"/>
+                        <outlet property="weightLabel" destination="mq2-lE-aia" id="KIf-6C-Mag"/>
+                        <outlet property="widthLabel" destination="FwW-0C-Nst" id="o71-SW-BTN"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iV8-sP-dSv" userLabel="First Responder" sceneMemberID="firstResponder"/>
