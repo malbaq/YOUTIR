@@ -8,6 +8,7 @@ pod 'ParseFacebookUtilsV4'
 pod 'FBSDKCoreKit'
 pod 'FBSDKLoginKit'
 pod 'FBSDKShareKit'
+pod 'TPKeyboardAvoiding'
 end
 
 target 'YOUTIRTests' do

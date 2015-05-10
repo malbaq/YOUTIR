@@ -691,6 +691,9 @@
                                                     <rect key="frame" x="23" y="0.0" width="569" height="43"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                     <textInputTraits key="textInputTraits"/>
+                                                    <connections>
+                                                        <outlet property="delegate" destination="p0K-VD-x5k" id="LB5-QO-fvL"/>
+                                                    </connections>
                                                 </textField>
                                             </subviews>
                                             <constraints>
@@ -710,6 +713,9 @@
                                                     <rect key="frame" x="23" y="0.0" width="569" height="43"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                     <textInputTraits key="textInputTraits"/>
+                                                    <connections>
+                                                        <outlet property="delegate" destination="p0K-VD-x5k" id="pe0-pB-AwJ"/>
+                                                    </connections>
                                                 </textField>
                                             </subviews>
                                             <constraints>
@@ -733,6 +739,9 @@
                                                     <rect key="frame" x="23" y="0.0" width="569" height="43"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                     <textInputTraits key="textInputTraits"/>
+                                                    <connections>
+                                                        <outlet property="delegate" destination="p0K-VD-x5k" id="B0p-Ah-Slm"/>
+                                                    </connections>
                                                 </textField>
                                             </subviews>
                                             <constraints>
@@ -752,6 +761,9 @@
                                                     <rect key="frame" x="23" y="0.0" width="569" height="43"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                     <textInputTraits key="textInputTraits"/>
+                                                    <connections>
+                                                        <outlet property="delegate" destination="p0K-VD-x5k" id="1dr-F6-nzh"/>
+                                                    </connections>
                                                 </textField>
                                             </subviews>
                                             <constraints>
@@ -771,6 +783,9 @@
                                                     <rect key="frame" x="23" y="0.0" width="569" height="43"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                     <textInputTraits key="textInputTraits"/>
+                                                    <connections>
+                                                        <outlet property="delegate" destination="p0K-VD-x5k" id="Eyg-w6-7tF"/>
+                                                    </connections>
                                                 </textField>
                                             </subviews>
                                             <constraints>
@@ -790,6 +805,9 @@
                                                     <rect key="frame" x="23" y="0.0" width="569" height="43"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                     <textInputTraits key="textInputTraits"/>
+                                                    <connections>
+                                                        <outlet property="delegate" destination="p0K-VD-x5k" id="CNB-Ia-esH"/>
+                                                    </connections>
                                                 </textField>
                                             </subviews>
                                             <constraints>
@@ -813,6 +831,9 @@
                                                     <rect key="frame" x="23" y="0.0" width="569" height="43"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                     <textInputTraits key="textInputTraits"/>
+                                                    <connections>
+                                                        <outlet property="delegate" destination="p0K-VD-x5k" id="74X-ea-kny"/>
+                                                    </connections>
                                                 </textField>
                                             </subviews>
                                             <constraints>

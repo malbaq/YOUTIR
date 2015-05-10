@@ -2,16 +2,23 @@
 
 + Instead custom design table view
 
-Cloud Code - делает ментор
+Cloud Code - делает ментор // посмотреть самому.
 
 paypal - ментор
 
-проверка warnings if let
+проверка warnings if let 
+if let - посмотреть как устроено
+посмотреть новую версию if let
 
-Клава по уровню textfield
+Невыделять серым didSelectRow// shouldhighlightrow
 
-Невыделять серым didSelectRow
+Подгружать города // countryselectoor lib need to found
 
-Подгружать города
+Поговорить с ИТ перевозчиков
+
+find JS dev for parse and paypal.
+
+//Не скрывается клава на self.view.endEditing(true)
+//Клава сама равняется ))
 
 */
