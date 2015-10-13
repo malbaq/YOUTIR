@@ -21,7 +21,7 @@ class QuotesFeedViewController: UIViewController, UITableViewDataSource, UITable
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        println("fuck viewDidLoad \(request)")
         self.setUpQuotes()
     }
 

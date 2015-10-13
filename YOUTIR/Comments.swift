@@ -18,7 +18,13 @@ if let - посмотреть как устроено
 
 find JS dev for parse and paypal.
 
-//Не скрывается клава на self.view.endEditing(true)
-//Клава сама равняется ))
+int -> float
+
+add exact address, geocoding
+
+add image of the cargo
+
+Не скрывается клава на self.view.endEditing(true)
+Клава сама равняется )) и без TPKey...
 
 */

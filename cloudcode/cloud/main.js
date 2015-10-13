@@ -1,5 +1,24 @@
 // Use Parse.Cloud.define to define as many cloud functions as you want.
 // For example:
+
+var pecom = require('cloud/pecom.js');
+pecom.initialize('malbaq', '0E10B1576110C4EA3D1F745B7310191849220E26');
+
+Parse.Cloud.define('calculatePecom', function(request, response) {
+    pecom.calculatePrice( {
+        'length' : 2.1,
+        'width' : 3.2,
+        'height' : 2.2,
+        'Weight' : 3.3,
+        'insurance' : 200.0
+    }).then(function(httpResponse) {
+        response.success("Calculated!");
+    }, function(httpResponse) {
+        console.error(httpResponse);
+        response.error("Uh oh, something went wrong");
+    });
+});
+
 Parse.Cloud.define("getQuotes", function(request, response) {
 	var quotes = { "quotes" : [
 		{ 	"carriers" : [
@@ -10,7 +29,7 @@ Parse.Cloud.define("getQuotes", function(request, response) {
 		  	  		"transitTime" : 5,
 					"imageLogoPath" : "carrierName1.png",
 					"carrierTel" : 74959000000,
-					"carrierWeb" : "http://dedede.de"
+				    "carrierWeb" : "http://dedede.de"
 				},
 	  			{
 		  	  		"carrierID" : "b2345678901",
@@ -77,9 +96,11 @@ Parse.Cloud.define("testCalculationRequest", function(request, response) {
       },
       success: function(httpResponse) {
         console.log(httpResponse.text);
+        response.success()
       },
       error: function(httpResponse) {
         console.error('Request failed with response code ' + httpResponse.status);
+        response.error()
       }
     });
 });
