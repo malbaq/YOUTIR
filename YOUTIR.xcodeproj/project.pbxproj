@@ -217,6 +217,8 @@
 		E23D2DFB1AD3E8CF00C873FD /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				LastSwiftMigration = 0720;
+				LastSwiftUpdateCheck = 0720;
 				LastUpgradeCheck = 0620;
 				ORGANIZATIONNAME = "YOUTIR LLC";
 				TargetAttributes = {

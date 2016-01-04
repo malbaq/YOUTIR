@@ -147,12 +147,7 @@ class DetailTableViewController: UITableViewController, PFLogInViewControllerDel
         
         logInController.facebookPermissions = ["email", "public_profile"]
         
-        logInController.fields = (PFLogInFields.UsernameAndPassword
-            | PFLogInFields.LogInButton
-            | PFLogInFields.SignUpButton
-            | PFLogInFields.PasswordForgotten
-            | PFLogInFields.DismissButton
-            | PFLogInFields.Facebook)
+        logInController.fields = ([PFLogInFields.UsernameAndPassword, PFLogInFields.LogInButton, PFLogInFields.SignUpButton, PFLogInFields.PasswordForgotten, PFLogInFields.DismissButton, PFLogInFields.Facebook])
         
         self.presentViewController(logInController, animated:true, completion: nil)
     }

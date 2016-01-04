@@ -108,7 +108,7 @@ class RequestFormTableViewController: UITableViewController, UITextFieldDelegate
     */
     
     //Скрыть клаву по клику
-    override func touchesBegan(touches: Set<NSObject>, withEvent event: UIEvent) {
+    override func touchesBegan(touches: Set<UITouch>, withEvent event: UIEvent?) {
         self.view.endEditing(true)
     }
     
@@ -125,7 +125,7 @@ class RequestFormTableViewController: UITableViewController, UITextFieldDelegate
     }
     
     func textFieldDidEndEditing(textField: UITextField) {
-        if textField.text.isEmpty {
+        if textField.text!.isEmpty {
             
 //            textField.layer.borderWidth = 1.0
 //            textField.layer.borderColor = UIColor.redColor().CGColor
@@ -158,9 +158,9 @@ class RequestFormTableViewController: UITableViewController, UITextFieldDelegate
         
         // Проверяем обязательные для заполнения поля
         
-        if fromCityTextField.text.isEmpty == true || toCityTextField.text.isEmpty == true || weightTextField.text.isEmpty == true || lengthTextField.text.isEmpty == true || widthTextField.text.isEmpty == true || heightTextField.text.isEmpty == true || insuranceTextField.text.isEmpty == true  {
+        if fromCityTextField.text!.isEmpty == true || toCityTextField.text!.isEmpty == true || weightTextField.text!.isEmpty == true || lengthTextField.text!.isEmpty == true || widthTextField.text!.isEmpty == true || heightTextField.text!.isEmpty == true || insuranceTextField.text!.isEmpty == true  {
             //alert
-            println ("isEmpty check failed")
+            print ("isEmpty check failed")
             var alert = UIAlertController(title: "One or more fields are empty", message: "You have to fill out this and this fields of the form.", preferredStyle: UIAlertControllerStyle.Alert)
             alert.addAction(UIAlertAction(title: "OK", style: .Default, handler: { action in
                 alert.dismissViewControllerAnimated(true, completion: nil)
@@ -171,13 +171,13 @@ class RequestFormTableViewController: UITableViewController, UITextFieldDelegate
             
             // Запускается спинер
             
-            var weight = weightTextField.text.toInt()!
-            var length = lengthTextField.text.toInt()!
-            var width = widthTextField.text.toInt()!
-            var height = heightTextField.text.toInt()!
-            var insurance = insuranceTextField.text.toInt()!
+            var weight = Int(weightTextField.text!)!
+            var length = Int(lengthTextField.text!)!
+            var width = Int(widthTextField.text!)!
+            var height = Int(heightTextField.text!)!
+            var insurance = Int(insuranceTextField.text!)!
             
-            request = Request(fromCity: fromCityTextField.text, toCity: toCityTextField.text, weight: weight, length: length, width: width, height: height, insurance: insurance)
+            request = Request(fromCity: fromCityTextField.text!, toCity: toCityTextField.text!, weight: weight, length: length, width: width, height: height, insurance: insurance)
             request!.save()
             //save in background...
             

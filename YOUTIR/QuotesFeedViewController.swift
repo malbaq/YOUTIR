@@ -21,7 +21,7 @@ class QuotesFeedViewController: UIViewController, UITableViewDataSource, UITable
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        println("fuck viewDidLoad \(request)")
+        print("fuck viewDidLoad \(request)")
         self.setUpQuotes()
     }
 
@@ -52,7 +52,7 @@ class QuotesFeedViewController: UIViewController, UITableViewDataSource, UITable
     
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         let quote = arrayOfQuotes[indexPath.row]
-        var detailTableViewController: DetailTableViewController = self.storyboard?.instantiateViewControllerWithIdentifier("DetailTableViewController")as! DetailTableViewController
+        let detailTableViewController: DetailTableViewController = self.storyboard?.instantiateViewControllerWithIdentifier("DetailTableViewController")as! DetailTableViewController
 
         detailTableViewController.quote = quote
         self.navigationController?.pushViewController(detailTableViewController, animated: true)
@@ -62,7 +62,7 @@ class QuotesFeedViewController: UIViewController, UITableViewDataSource, UITable
 
     func setUpQuotes() {
         
-        var query = Quote.query()
+        let query = Quote.query()
         
         query!.whereKey("transitRate", lessThanOrEqualTo: 6500)
         
@@ -71,7 +71,7 @@ class QuotesFeedViewController: UIViewController, UITableViewDataSource, UITable
                 if let objects = objects as? [Quote] {
                     self.arrayOfQuotes = objects
                 }
-                println("the first quote is \(self.arrayOfQuotes[0])")
+                print("the first quote is \(self.arrayOfQuotes[0])")
             }
         }
     }
