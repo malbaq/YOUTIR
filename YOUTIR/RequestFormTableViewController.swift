@@ -12,7 +12,7 @@ class RequestFormTableViewController: UITableViewController, UITextFieldDelegate
     
     var request: Request?
     
-    // Добавить UI didEndEditing in delegate. Сделать рамку поля красной.
+    // Добавить UI didEndEditing in delegate. Сделать рамку поля красной
     
     @IBOutlet var fromCityTextField: UITextField!
     @IBOutlet var toCityTextField: UITextField!
