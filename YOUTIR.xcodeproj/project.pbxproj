@@ -20,6 +20,7 @@
 		E24B7C601ADADEFE0026E63B /* QuoteModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E24B7C5F1ADADEFE0026E63B /* QuoteModel.swift */; };
 		E24B7C631ADB17A30026E63B /* carrierName1.png in Resources */ = {isa = PBXBuildFile; fileRef = E24B7C611ADB17A30026E63B /* carrierName1.png */; };
 		E24B7C641ADB17A30026E63B /* carrierName2.png in Resources */ = {isa = PBXBuildFile; fileRef = E24B7C621ADB17A30026E63B /* carrierName2.png */; };
+		E293D8121C3B018A00A7E2DE /* Request.swift in Sources */ = {isa = PBXBuildFile; fileRef = E293D8111C3B018A00A7E2DE /* Request.swift */; };
 		E2B995771AFCA6A20031255F /* RequestFormTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2B995761AFCA6A20031255F /* RequestFormTableViewController.swift */; };
 		E2D1C5771AE512FE00DBB3A8 /* RequestModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2D1C5761AE512FE00DBB3A8 /* RequestModel.swift */; };
 		E2DD42DE1AF6413700A4F51D /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2DD42DD1AF6413700A4F51D /* LoginViewController.swift */; };
@@ -58,6 +59,7 @@
 		E24B7C5F1ADADEFE0026E63B /* QuoteModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuoteModel.swift; sourceTree = "<group>"; };
 		E24B7C611ADB17A30026E63B /* carrierName1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = carrierName1.png; sourceTree = "<group>"; };
 		E24B7C621ADB17A30026E63B /* carrierName2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = carrierName2.png; sourceTree = "<group>"; };
+		E293D8111C3B018A00A7E2DE /* Request.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Request.swift; sourceTree = "<group>"; };
 		E2B995761AFCA6A20031255F /* RequestFormTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RequestFormTableViewController.swift; sourceTree = "<group>"; };
 		E2D1C5761AE512FE00DBB3A8 /* RequestModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RequestModel.swift; sourceTree = "<group>"; };
 		E2DD42DD1AF6413700A4F51D /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
@@ -138,6 +140,7 @@
 				E23D2E111AD3E8CF00C873FD /* LaunchScreen.xib */,
 				E24B7C5F1ADADEFE0026E63B /* QuoteModel.swift */,
 				E2D1C5761AE512FE00DBB3A8 /* RequestModel.swift */,
+				E293D8111C3B018A00A7E2DE /* Request.swift */,
 				E234771A1AEFB88E00ADE6C4 /* CarrierModel.swift */,
 				E23D2E061AD3E8CF00C873FD /* Supporting Files */,
 				E23D2E421AD3FA5700C873FD /* YOUTIR-Bridging-Header.h */,
@@ -311,6 +314,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E2DD42E01AF6474800A4F51D /* SignUpViewController.swift in Sources */,
+				E293D8121C3B018A00A7E2DE /* Request.swift in Sources */,
 				E24B7C601ADADEFE0026E63B /* QuoteModel.swift in Sources */,
 				E24B7C5E1ADA9EE90026E63B /* QuoteTableViewCell.swift in Sources */,
 				E234771F1AF12DFC00ADE6C4 /* Comments.swift in Sources */,
