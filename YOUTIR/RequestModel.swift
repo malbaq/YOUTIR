@@ -24,7 +24,7 @@ class Request : PFObject, PFSubclassing {
             self.registerSubclass()
         }
     }
-    
+    //
     static func parseClassName() -> String {
         return "Request"
     }

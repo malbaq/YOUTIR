@@ -18,7 +18,7 @@ class QuotesFeedViewController: UIViewController, UITableViewDataSource, UITable
             self.tableView.reloadData()
         }
     }
-    //
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         print("fuck viewDidLoad \(request)")
