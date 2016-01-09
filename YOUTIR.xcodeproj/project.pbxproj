@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		D996B9FC54D4D0192FE6494C /* libPods-YOUTIR.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B990248AF1ACC8ECBAD8DEB9 /* libPods-YOUTIR.a */; };
+		E233FCD71C3EE75100440576 /* PecomRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = E233FCD61C3EE75100440576 /* PecomRequest.swift */; };
+		E233FCDB1C3EEC0900440576 /* DellinRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = E233FCDA1C3EEC0900440576 /* DellinRequest.swift */; };
 		E234771B1AEFB88E00ADE6C4 /* CarrierModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E234771A1AEFB88E00ADE6C4 /* CarrierModel.swift */; };
 		E234771F1AF12DFC00ADE6C4 /* Comments.swift in Sources */ = {isa = PBXBuildFile; fileRef = E234771E1AF12DFC00ADE6C4 /* Comments.swift */; };
 		E23D2E091AD3E8CF00C873FD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E23D2E081AD3E8CF00C873FD /* AppDelegate.swift */; };
@@ -20,7 +22,6 @@
 		E24B7C601ADADEFE0026E63B /* QuoteModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E24B7C5F1ADADEFE0026E63B /* QuoteModel.swift */; };
 		E24B7C631ADB17A30026E63B /* carrierName1.png in Resources */ = {isa = PBXBuildFile; fileRef = E24B7C611ADB17A30026E63B /* carrierName1.png */; };
 		E24B7C641ADB17A30026E63B /* carrierName2.png in Resources */ = {isa = PBXBuildFile; fileRef = E24B7C621ADB17A30026E63B /* carrierName2.png */; };
-		E293D8121C3B018A00A7E2DE /* Request.swift in Sources */ = {isa = PBXBuildFile; fileRef = E293D8111C3B018A00A7E2DE /* Request.swift */; };
 		E2B995771AFCA6A20031255F /* RequestFormTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2B995761AFCA6A20031255F /* RequestFormTableViewController.swift */; };
 		E2D1C5771AE512FE00DBB3A8 /* RequestModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2D1C5761AE512FE00DBB3A8 /* RequestModel.swift */; };
 		E2DD42DE1AF6413700A4F51D /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2DD42DD1AF6413700A4F51D /* LoginViewController.swift */; };
@@ -42,6 +43,8 @@
 		82D2AAB7B27B62E3E8999983 /* Pods-YOUTIR.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YOUTIR.debug.xcconfig"; path = "Pods/Target Support Files/Pods-YOUTIR/Pods-YOUTIR.debug.xcconfig"; sourceTree = "<group>"; };
 		B1A9AAD46699B2AC02EBFC88 /* Pods-YOUTIR.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YOUTIR.release.xcconfig"; path = "Pods/Target Support Files/Pods-YOUTIR/Pods-YOUTIR.release.xcconfig"; sourceTree = "<group>"; };
 		B990248AF1ACC8ECBAD8DEB9 /* libPods-YOUTIR.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-YOUTIR.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		E233FCD61C3EE75100440576 /* PecomRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PecomRequest.swift; sourceTree = "<group>"; };
+		E233FCDA1C3EEC0900440576 /* DellinRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DellinRequest.swift; sourceTree = "<group>"; };
 		E234771A1AEFB88E00ADE6C4 /* CarrierModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CarrierModel.swift; sourceTree = "<group>"; };
 		E234771E1AF12DFC00ADE6C4 /* Comments.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Comments.swift; sourceTree = "<group>"; };
 		E23D2E031AD3E8CF00C873FD /* YOUTIR.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = YOUTIR.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -59,7 +62,6 @@
 		E24B7C5F1ADADEFE0026E63B /* QuoteModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuoteModel.swift; sourceTree = "<group>"; };
 		E24B7C611ADB17A30026E63B /* carrierName1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = carrierName1.png; sourceTree = "<group>"; };
 		E24B7C621ADB17A30026E63B /* carrierName2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = carrierName2.png; sourceTree = "<group>"; };
-		E293D8111C3B018A00A7E2DE /* Request.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Request.swift; sourceTree = "<group>"; };
 		E2B995761AFCA6A20031255F /* RequestFormTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RequestFormTableViewController.swift; sourceTree = "<group>"; };
 		E2D1C5761AE512FE00DBB3A8 /* RequestModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RequestModel.swift; sourceTree = "<group>"; };
 		E2DD42DD1AF6413700A4F51D /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
@@ -139,8 +141,9 @@
 				E23D2E0F1AD3E8CF00C873FD /* Images.xcassets */,
 				E23D2E111AD3E8CF00C873FD /* LaunchScreen.xib */,
 				E24B7C5F1ADADEFE0026E63B /* QuoteModel.swift */,
+				E233FCD61C3EE75100440576 /* PecomRequest.swift */,
+				E233FCDA1C3EEC0900440576 /* DellinRequest.swift */,
 				E2D1C5761AE512FE00DBB3A8 /* RequestModel.swift */,
-				E293D8111C3B018A00A7E2DE /* Request.swift */,
 				E234771A1AEFB88E00ADE6C4 /* CarrierModel.swift */,
 				E23D2E061AD3E8CF00C873FD /* Supporting Files */,
 				E23D2E421AD3FA5700C873FD /* YOUTIR-Bridging-Header.h */,
@@ -314,13 +317,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				E2DD42E01AF6474800A4F51D /* SignUpViewController.swift in Sources */,
-				E293D8121C3B018A00A7E2DE /* Request.swift in Sources */,
 				E24B7C601ADADEFE0026E63B /* QuoteModel.swift in Sources */,
 				E24B7C5E1ADA9EE90026E63B /* QuoteTableViewCell.swift in Sources */,
 				E234771F1AF12DFC00ADE6C4 /* Comments.swift in Sources */,
 				E23D2E091AD3E8CF00C873FD /* AppDelegate.swift in Sources */,
 				E2D1C5771AE512FE00DBB3A8 /* RequestModel.swift in Sources */,
+				E233FCD71C3EE75100440576 /* PecomRequest.swift in Sources */,
 				E234771B1AEFB88E00ADE6C4 /* CarrierModel.swift in Sources */,
+				E233FCDB1C3EEC0900440576 /* DellinRequest.swift in Sources */,
 				E2EDCB2B1AFE0B6D0015D241 /* DetailTableViewController.swift in Sources */,
 				E2DD42DE1AF6413700A4F51D /* LoginViewController.swift in Sources */,
 				E24B7C5C1AD9AAB20026E63B /* QuotesFeedViewController.swift in Sources */,
