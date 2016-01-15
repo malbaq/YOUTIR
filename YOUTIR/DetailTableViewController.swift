@@ -35,7 +35,7 @@ class DetailTableViewController: UITableViewController, PFLogInViewControllerDel
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem()
         
-        quote.fetchIfNeeded()
+        try! quote.fetchIfNeeded()
         self.carrierNameLabel.text = quote.carrier["name"] as! String
         self.transitRateLabel.text = String(quote.transitRate)
         self.transitTimeLabel.text = String(quote.transitTime)
@@ -43,7 +43,7 @@ class DetailTableViewController: UITableViewController, PFLogInViewControllerDel
         self.carrierWebLabel.text = quote.carrier["web"] as! String
         self.logoImage.image = UIImage(named: "placeholder")
         
-        quote.request.fetchIfNeeded()
+        try! quote.request.fetchIfNeeded()
 
         self.fromCityLabel.text = quote.request.fromCity
         self.toCityLabel.text = quote.request.toCity

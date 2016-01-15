@@ -6,6 +6,8 @@
 //  Copyright (c) 2015 YOUTIR LLC. All rights reserved.
 //
 
+import Alamofire // To test Alamofire
+
 import UIKit
 
 class RequestFormTableViewController: UITableViewController, UITextFieldDelegate {
@@ -25,48 +27,53 @@ class RequestFormTableViewController: UITableViewController, UITextFieldDelegate
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        let json = ["title": "Степное"]
-        let theJSONData = try! NSJSONSerialization.dataWithJSONObject(
-            json ,
-            options: NSJSONWritingOptions(rawValue: 0))
-        let theJSONText = NSString(data: theJSONData,
-            encoding: NSUTF8StringEncoding)
-        print("JSON string = \(theJSONText!)")
+        Alamofire.request(<#T##method: Method##Method#>, <#T##URLString: URLStringConvertible##URLStringConvertible#>, parameters: <#T##[String : AnyObject]?#>, encoding: <#T##ParameterEncoding#>, headers: <#T##[String : String]?#>)
         
-        var dellin = DellinRequest()
-        dellin.getDellinQuote()
-        
-        let jsonХ = [
-            "title": "Степное"
-        ] as Dictionary
-        
-        let jsonData = try! NSJSONSerialization.dataWithJSONObject(json, options: [])
-        print(json)
-        print(theJSONText!)
-        // Config Basic Auth
-        let username = "malbaq"
-        let password = "8F102968198C7999F7AF8840FE7B44D2F4BBAD81"
-        let loginString = NSString(format: "%@:%@", username, password)
-        let loginData: NSData = loginString.dataUsingEncoding(NSUTF8StringEncoding)!
-        let base64LoginString = loginData.base64EncodedStringWithOptions(NSDataBase64EncodingOptions.init(rawValue: 0))
-        
-        // Create, config and perfom HTTP Request
-        let url = NSURL(string: "https://kabinet.pecom.ru/api/v1/BRANCHES/FINDBYTITLE/")
-        let request = NSMutableURLRequest(URL: url!)
-        request.HTTPMethod = "POST"
-        request.addValue("application/json; charset=utf-8", forHTTPHeaderField: "Content-Type")
-        request.addValue("application/json", forHTTPHeaderField: "Accept")
-        request.setValue("Basic \(base64LoginString)", forHTTPHeaderField: "Authorization")
-        request.HTTPBody = theJSONData
-        let session = NSURLSession.sharedSession()
-        let task = session.dataTaskWithRequest(request) { (data, response, error) -> Void in
-        
-            if let response = response {
-                print("the response is \(response)")
-            }
-        }
-        
-        task.resume()
+//        //////// from here
+//        let json = ["title": "Степное"]
+//        let theJSONData = try! NSJSONSerialization.dataWithJSONObject(
+//            json ,
+//            options: NSJSONWritingOptions(rawValue: 0))
+//        let theJSONText = NSString(data: theJSONData,
+//            encoding: NSUTF8StringEncoding)
+//        print("JSON string = \(theJSONText!)")
+//        
+//        var dellin = DellinRequest()
+//        dellin.getDellinQuote()
+//        
+//        let jsonХ = [
+//            "title": "Степное"
+//        ] as Dictionary
+//        
+//        let jsonData = try! NSJSONSerialization.dataWithJSONObject(json, options: [])
+//        print(json)
+//        print(theJSONText!)
+//        // Config Basic Auth
+//        let username = "malbaq"
+//        let password = "8F102968198C7999F7AF8840FE7B44D2F4BBAD81"
+//        let loginString = NSString(format: "%@:%@", username, password)
+//        let loginData: NSData = loginString.dataUsingEncoding(NSUTF8StringEncoding)!
+//        let base64LoginString = loginData.base64EncodedStringWithOptions(NSDataBase64EncodingOptions.init(rawValue: 0))
+//        
+//        // Create, config and perfom HTTP Request
+//        let url = NSURL(string: "https://kabinet.pecom.ru/api/v1/BRANCHES/FINDBYTITLE/")
+//        let request = NSMutableURLRequest(URL: url!)
+//        request.HTTPMethod = "POST"
+//        request.addValue("application/json; charset=utf-8", forHTTPHeaderField: "Content-Type")
+//        request.addValue("application/json", forHTTPHeaderField: "Accept")
+//        request.setValue("Basic \(base64LoginString)", forHTTPHeaderField: "Authorization")
+//        request.HTTPBody = theJSONData
+//        let session = NSURLSession.sharedSession()
+//        let task = session.dataTaskWithRequest(request) { (data, response, error) -> Void in
+//        
+//            if let response = response {
+//                print("the response is \(response)")
+//            }
+//        }
+//        
+//        task.resume()
+//        
+//        ///// <->till here
 
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
@@ -220,7 +227,7 @@ class RequestFormTableViewController: UITableViewController, UITextFieldDelegate
             var insurance = Int(insuranceTextField.text!)!
             
             request = Request(fromCity: fromCityTextField.text!, toCity: toCityTextField.text!, weight: weight, length: length, width: width, height: height, insurance: insurance)
-            request!.save()
+            try! request!.save()
             //save in background...
             
             self.performSegueWithIdentifier("showQuotesFeed", sender: self)

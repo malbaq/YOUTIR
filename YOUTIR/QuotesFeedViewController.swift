@@ -66,7 +66,7 @@ class QuotesFeedViewController: UIViewController, UITableViewDataSource, UITable
         
         query!.whereKey("transitRate", lessThanOrEqualTo: 6500)
         
-        query!.findObjectsInBackgroundWithBlock { (objects: [AnyObject]?, error: NSError?) -> Void in
+        try! query!.findObjectsInBackgroundWithBlock { (objects: [PFObject]?, error: NSError?) -> Void in
             if error == nil {
                 if let objects = objects as? [Quote] {
                     self.arrayOfQuotes = objects

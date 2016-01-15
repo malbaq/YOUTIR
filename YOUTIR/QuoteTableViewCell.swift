@@ -25,7 +25,7 @@ class QuoteTableViewCell: UITableViewCell {
     }
     
     func setQuote(quote: Quote){
-        quote.carrier.fetchIfNeeded()
+        try! quote.carrier.fetchIfNeeded()
         self.carrierName.text = quote.carrier["name"] as! String
         self.transitRate.text = String(quote.transitRate)
         self.transitTime.text = String(quote.transitTime)
