@@ -8,8 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		D996B9FC54D4D0192FE6494C /* libPods-YOUTIR.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B990248AF1ACC8ECBAD8DEB9 /* libPods-YOUTIR.a */; };
-		E233FCD71C3EE75100440576 /* PecomRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = E233FCD61C3EE75100440576 /* PecomRequest.swift */; };
-		E233FCDB1C3EEC0900440576 /* DellinRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = E233FCDA1C3EEC0900440576 /* DellinRequest.swift */; };
 		E234771B1AEFB88E00ADE6C4 /* CarrierModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E234771A1AEFB88E00ADE6C4 /* CarrierModel.swift */; };
 		E234771F1AF12DFC00ADE6C4 /* Comments.swift in Sources */ = {isa = PBXBuildFile; fileRef = E234771E1AF12DFC00ADE6C4 /* Comments.swift */; };
 		E23D2E091AD3E8CF00C873FD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E23D2E081AD3E8CF00C873FD /* AppDelegate.swift */; };
@@ -29,6 +27,15 @@
 		E2DD42DE1AF6413700A4F51D /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2DD42DD1AF6413700A4F51D /* LoginViewController.swift */; };
 		E2DD42E01AF6474800A4F51D /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2DD42DF1AF6474800A4F51D /* SignUpViewController.swift */; };
 		E2EDCB2B1AFE0B6D0015D241 /* DetailTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2EDCB2A1AFE0B6D0015D241 /* DetailTableViewController.swift */; };
+		E2EF572E1C4EC2AE00F81274 /* QuoteManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2EF572D1C4EC2AE00F81274 /* QuoteManager.swift */; };
+		E2EF57361C4EC58C00F81274 /* ManagerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2EF57351C4EC58C00F81274 /* ManagerViewController.swift */; };
+		E2EF57381C53A10100F81274 /* DellinCarrierModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2EF57371C53A10100F81274 /* DellinCarrierModel.swift */; };
+		E2FAC33D1C4B8FF0007B48AD /* TestFeaturesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2FAC33C1C4B8FF0007B48AD /* TestFeaturesViewController.swift */; };
+		E2FAC3491C4D15E0007B48AD /* Request.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2FAC3481C4D15E0007B48AD /* Request.swift */; };
+		E2FAC34B1C4D17AE007B48AD /* QuoteProviderProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2FAC34A1C4D17AE007B48AD /* QuoteProviderProtocol.swift */; };
+		E2FAC34D1C4D19CC007B48AD /* Quote.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2FAC34C1C4D19CC007B48AD /* Quote.swift */; };
+		E2FAC34F1C4D2493007B48AD /* Carrier.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2FAC34E1C4D2493007B48AD /* Carrier.swift */; };
+		E2FAC3511C4D2B72007B48AD /* PecomCarrierModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2FAC3501C4D2B72007B48AD /* PecomCarrierModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -115,8 +122,6 @@
 		82D2AAB7B27B62E3E8999983 /* Pods-YOUTIR.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YOUTIR.debug.xcconfig"; path = "Pods/Target Support Files/Pods-YOUTIR/Pods-YOUTIR.debug.xcconfig"; sourceTree = "<group>"; };
 		B1A9AAD46699B2AC02EBFC88 /* Pods-YOUTIR.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YOUTIR.release.xcconfig"; path = "Pods/Target Support Files/Pods-YOUTIR/Pods-YOUTIR.release.xcconfig"; sourceTree = "<group>"; };
 		B990248AF1ACC8ECBAD8DEB9 /* libPods-YOUTIR.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-YOUTIR.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		E233FCD61C3EE75100440576 /* PecomRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PecomRequest.swift; sourceTree = "<group>"; };
-		E233FCDA1C3EEC0900440576 /* DellinRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DellinRequest.swift; sourceTree = "<group>"; };
 		E234771A1AEFB88E00ADE6C4 /* CarrierModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CarrierModel.swift; sourceTree = "<group>"; };
 		E234771E1AF12DFC00ADE6C4 /* Comments.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Comments.swift; sourceTree = "<group>"; };
 		E23D2E031AD3E8CF00C873FD /* YOUTIR.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = YOUTIR.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -140,6 +145,15 @@
 		E2DD42DD1AF6413700A4F51D /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		E2DD42DF1AF6474800A4F51D /* SignUpViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		E2EDCB2A1AFE0B6D0015D241 /* DetailTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailTableViewController.swift; sourceTree = "<group>"; };
+		E2EF572D1C4EC2AE00F81274 /* QuoteManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuoteManager.swift; sourceTree = "<group>"; };
+		E2EF57351C4EC58C00F81274 /* ManagerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ManagerViewController.swift; sourceTree = "<group>"; };
+		E2EF57371C53A10100F81274 /* DellinCarrierModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DellinCarrierModel.swift; sourceTree = "<group>"; };
+		E2FAC33C1C4B8FF0007B48AD /* TestFeaturesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestFeaturesViewController.swift; sourceTree = "<group>"; };
+		E2FAC3481C4D15E0007B48AD /* Request.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Request.swift; sourceTree = "<group>"; };
+		E2FAC34A1C4D17AE007B48AD /* QuoteProviderProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuoteProviderProtocol.swift; sourceTree = "<group>"; };
+		E2FAC34C1C4D19CC007B48AD /* Quote.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Quote.swift; sourceTree = "<group>"; };
+		E2FAC34E1C4D2493007B48AD /* Carrier.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Carrier.swift; sourceTree = "<group>"; };
+		E2FAC3501C4D2B72007B48AD /* PecomCarrierModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PecomCarrierModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -216,12 +230,19 @@
 				E23D2E0F1AD3E8CF00C873FD /* Images.xcassets */,
 				E23D2E111AD3E8CF00C873FD /* LaunchScreen.xib */,
 				E24B7C5F1ADADEFE0026E63B /* QuoteModel.swift */,
-				E233FCD61C3EE75100440576 /* PecomRequest.swift */,
-				E233FCDA1C3EEC0900440576 /* DellinRequest.swift */,
+				E2FAC34C1C4D19CC007B48AD /* Quote.swift */,
 				E2D1C5761AE512FE00DBB3A8 /* RequestModel.swift */,
+				E2FAC3481C4D15E0007B48AD /* Request.swift */,
 				E234771A1AEFB88E00ADE6C4 /* CarrierModel.swift */,
+				E2FAC34E1C4D2493007B48AD /* Carrier.swift */,
+				E2FAC3501C4D2B72007B48AD /* PecomCarrierModel.swift */,
+				E2EF57371C53A10100F81274 /* DellinCarrierModel.swift */,
+				E2FAC34A1C4D17AE007B48AD /* QuoteProviderProtocol.swift */,
+				E2EF572D1C4EC2AE00F81274 /* QuoteManager.swift */,
 				E23D2E061AD3E8CF00C873FD /* Supporting Files */,
 				E23D2E421AD3FA5700C873FD /* YOUTIR-Bridging-Header.h */,
+				E2FAC33C1C4B8FF0007B48AD /* TestFeaturesViewController.swift */,
+				E2EF57351C4EC58C00F81274 /* ManagerViewController.swift */,
 				E234771E1AF12DFC00ADE6C4 /* Comments.swift */,
 			);
 			path = YOUTIR;
@@ -482,14 +503,21 @@
 			buildActionMask = 2147483647;
 			files = (
 				E2DD42E01AF6474800A4F51D /* SignUpViewController.swift in Sources */,
+				E2FAC34B1C4D17AE007B48AD /* QuoteProviderProtocol.swift in Sources */,
 				E24B7C601ADADEFE0026E63B /* QuoteModel.swift in Sources */,
 				E24B7C5E1ADA9EE90026E63B /* QuoteTableViewCell.swift in Sources */,
+				E2EF57381C53A10100F81274 /* DellinCarrierModel.swift in Sources */,
 				E234771F1AF12DFC00ADE6C4 /* Comments.swift in Sources */,
+				E2FAC33D1C4B8FF0007B48AD /* TestFeaturesViewController.swift in Sources */,
+				E2EF57361C4EC58C00F81274 /* ManagerViewController.swift in Sources */,
 				E23D2E091AD3E8CF00C873FD /* AppDelegate.swift in Sources */,
 				E2D1C5771AE512FE00DBB3A8 /* RequestModel.swift in Sources */,
-				E233FCD71C3EE75100440576 /* PecomRequest.swift in Sources */,
+				E2FAC3491C4D15E0007B48AD /* Request.swift in Sources */,
+				E2EF572E1C4EC2AE00F81274 /* QuoteManager.swift in Sources */,
 				E234771B1AEFB88E00ADE6C4 /* CarrierModel.swift in Sources */,
-				E233FCDB1C3EEC0900440576 /* DellinRequest.swift in Sources */,
+				E2FAC3511C4D2B72007B48AD /* PecomCarrierModel.swift in Sources */,
+				E2FAC34D1C4D19CC007B48AD /* Quote.swift in Sources */,
+				E2FAC34F1C4D2493007B48AD /* Carrier.swift in Sources */,
 				E2EDCB2B1AFE0B6D0015D241 /* DetailTableViewController.swift in Sources */,
 				E2DD42DE1AF6413700A4F51D /* LoginViewController.swift in Sources */,
 				E24B7C5C1AD9AAB20026E63B /* QuotesFeedViewController.swift in Sources */,

@@ -2,10 +2,6 @@
 
 + Instead custom design table view
 
-Cloud Code - делает ментор // посмотреть самому.
-
-paypal - ментор
-
 проверка warnings if let 
 if let - посмотреть как устроено
 посмотреть новую версию if let
